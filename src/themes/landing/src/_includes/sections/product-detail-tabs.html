@@ -1,0 +1,366 @@
+<!--==============================
+Product Detail Tabs
+==============================-->
+<section class="th-product-detail-tabs py-5 bg-gray">
+  <div class="container th-container">
+    <!-- Tab navigation for larger screens (d-none d-md-flex hides on mobile) -->
+    <div class="nav nav-tabs mb-4 d-none d-md-flex border-0" id="product-tabs" role="tablist">
+      <button class="nav-link active px-4 py-3 me-2" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab" aria-controls="specs" aria-selected="true">Specs</button>
+      <button class="nav-link px-4 py-3 me-2" id="dimensions-tab" data-bs-toggle="tab" data-bs-target="#dimensions" type="button" role="tab" aria-controls="dimensions" aria-selected="false">Dimensions</button>
+      <button class="nav-link px-4 py-3 me-2" id="downloads-tab" data-bs-toggle="tab" data-bs-target="#downloads" type="button" role="tab" aria-controls="downloads" aria-selected="false">Downloads</button>
+      <button class="nav-link px-4 py-3 me-2" id="certifications-tab" data-bs-toggle="tab" data-bs-target="#certifications" type="button" role="tab" aria-controls="certifications" aria-selected="false">Certifications</button>
+      <button class="nav-link px-4 py-3" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button" role="tab" aria-controls="media" aria-selected="false">Pictures & Videos</button>
+    </div>
+
+    <!-- Accordion for mobile screens only (d-md-none hides on desktop) -->
+    <div class="accordion d-md-none mb-4" id="accordionProductDetails">
+      <div class="accordion-item border-0 mb-2">
+        <h2 class="accordion-header" id="headingSpecs">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecs" aria-expanded="true" aria-controls="collapseSpecs">
+            Specs
+          </button>
+        </h2>
+        <div id="collapseSpecs" class="accordion-collapse collapse show" aria-labelledby="headingSpecs" data-bs-parent="#accordionProductDetails">
+          <div class="accordion-body pt-0">
+            <!-- This will be filled with the same content as the tab -->
+            <div class="row">
+              <div class="col-lg-6">
+                <h3>Product Details</h3>
+                <ul class="list-unstyled">
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit amet.</li>
+                  <li>• Lorem ipsum dolor sit geho urna pellentesque.</li>
+                </ul>
+                <div class="th-link @@classPadding">
+                  <div class="th-link-text pr-5">
+                    View Catalogue
+
+                  </div>
+                  <div class="th-link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/img/product-detail/tab image.png" alt="Product Specifications" class="img-fluid mt-4 mt-lg-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 mb-2">
+        <h2 class="accordion-header" id="headingDimensions">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDimensions" aria-expanded="false" aria-controls="collapseDimensions">
+            Dimensions
+          </button>
+        </h2>
+        <div id="collapseDimensions" class="accordion-collapse collapse" aria-labelledby="headingDimensions" data-bs-parent="#accordionProductDetails">
+          <div class="accordion-body pt-0">
+            <!-- This will be filled with the same content as the tab -->
+            <div class="row">
+              <div class="col-lg-6">
+                <h3>Product Dimensions</h3>
+                <ul class="list-unstyled">
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit amet.</li>
+                </ul>
+                <div class="th-link @@classPadding">
+                  <div class="th-link-text pr-5">
+                    View Catalogue
+
+                  </div>
+                  <div class="th-link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/img/product-detail/second circle.png" alt="Product Dimensions" class="img-fluid mt-4 mt-lg-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 mb-2">
+        <h2 class="accordion-header" id="headingDownloads">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDownloads" aria-expanded="false" aria-controls="collapseDownloads">
+            Downloads
+          </button>
+        </h2>
+        <div id="collapseDownloads" class="accordion-collapse collapse" aria-labelledby="headingDownloads" data-bs-parent="#accordionProductDetails">
+          <div class="accordion-body pt-0">
+            <!-- This will be filled with the same content as the tab -->
+            <div class="row">
+              <div class="col-lg-6">
+                <h3>Available Downloads</h3>
+                <ul class="list-unstyled">
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+                <div class="th-link @@classPadding">
+                  <div class="th-link-text pr-5">
+                    Download All
+
+                  </div>
+                  <div class="th-link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/img/product-detail/tab image.png" alt="Downloads" class="img-fluid mt-4 mt-lg-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 mb-2">
+        <h2 class="accordion-header" id="headingCertifications">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCertifications" aria-expanded="false" aria-controls="collapseCertifications">
+            Certifications
+          </button>
+        </h2>
+        <div id="collapseCertifications" class="accordion-collapse collapse" aria-labelledby="headingCertifications" data-bs-parent="#accordionProductDetails">
+          <div class="accordion-body pt-0">
+            <!-- This will be filled with the same content as the tab -->
+            <div class="row">
+              <div class="col-lg-6">
+                <h3>Product Certifications</h3>
+                <ul class="list-unstyled">
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+                <div class="th-link @@classPadding">
+                  <div class="th-link-text pr-5">
+                    View Certifications
+
+                  </div>
+                  <div class="th-link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/img/product-detail/second circle.png" alt="Certifications" class="img-fluid mt-4 mt-lg-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingMedia">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false" aria-controls="collapseMedia">
+            Pictures & Videos
+          </button>
+        </h2>
+        <div id="collapseMedia" class="accordion-collapse collapse" aria-labelledby="headingMedia" data-bs-parent="#accordionProductDetails">
+          <div class="accordion-body pt-0">
+            <!-- This will be filled with the same content as the tab -->
+            <div class="row">
+              <div class="col-lg-6">
+                <h3>Media Gallery</h3>
+                <ul class="list-unstyled">
+                  <li>• Lorem ipsum dolor sit amet consectetur.</li>
+                  <li>• Lorem ipsum dolor sit</li>
+                  <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+                </ul>
+                <div class="th-link @@classPadding">
+                  <div class="th-link-text pr-5">
+                    View Gallery
+
+                  </div>
+                  <div class="th-link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/img/product-detail/tab image.png" alt="Media Gallery" class="img-fluid mt-4 mt-lg-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab content for larger screens -->
+    <div class="tab-content d-none d-md-block">
+      <div class="tab-pane fade show active" id="specs" role="tabpanel" aria-labelledby="specs-tab">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Lorem Ipsum Dolor Sit</h3>
+            <ul class="list-unstyled">
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit</li>
+              <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit amet.</li>
+              <li>• Lorem ipsum dolor sit geho urna pellentesque.</li>
+            </ul>
+            <div class="th-link @@classPadding">
+              <div class="th-link-text pr-5">
+                View Catalogue
+
+              </div>
+              <div class="th-link-icon-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/product-detail/tab image.png" alt="Product Specifications" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="dimensions" role="tabpanel" aria-labelledby="dimensions-tab">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Product Dimensions</h3>
+            <ul class="list-unstyled">
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit</li>
+              <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <div class="th-link @@classPadding">
+              <div class="th-link-text pr-5">
+                View Catalogue
+
+              </div>
+              <div class="th-link-icon-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/product-detail/second circle.png" alt="Product Dimensions" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="downloads" role="tabpanel" aria-labelledby="downloads-tab">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Available Downloads</h3>
+            <ul class="list-unstyled">
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit</li>
+              <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+            <div class="th-link @@classPadding">
+              <div class="th-link-text pr-5">
+                Download All
+
+              </div>
+              <div class="th-link-icon-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/product-detail/tab image.png" alt="Downloads" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="certifications" role="tabpanel" aria-labelledby="certifications-tab">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Product Certifications</h3>
+            <ul class="list-unstyled">
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit</li>
+              <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+            <div class="th-link @@classPadding">
+              <div class="th-link-text pr-5">
+                View Certifications
+
+              </div>
+              <div class="th-link-icon-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/product-detail/second circle.png" alt="Certifications" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Media Gallery</h3>
+            <ul class="list-unstyled">
+              <li>• Lorem ipsum dolor sit amet consectetur.</li>
+              <li>• Lorem ipsum dolor sit</li>
+              <li>• Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.</li>
+            </ul>
+            <div class="th-link @@classPadding">
+              <div class="th-link-text pr-5">
+                View Gallery
+
+              </div>
+              <div class="th-link-icon-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/product-detail/tab image.png" alt="Media Gallery" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom styles for the product detail tabs */
+
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .th-product-detail-tabs .accordion-body {
+      padding: 1rem;
+    }
+  }
+
+  /* Custom icon styles */
+  .th-product-detail-tabs a i {
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+  }
+
+  .th-product-detail-tabs a:hover i {
+    transform: rotate(45deg) translateX(3px);
+  }
+</style>

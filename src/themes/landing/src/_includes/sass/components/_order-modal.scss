@@ -1,0 +1,96 @@
+.th-order-modal-width {
+  max-width: calc(100% - 30%);
+  @include respond-to(sm) {
+    max-width: 100%;
+  }
+}
+.modal-header {
+  border-bottom: none !important;
+  @include respond-to(md) {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+}
+.th-order-modal-content {
+  padding: 43px 20px 43px 66px;
+  @include respond-to(lg) {
+    padding: 10px 20px 20px 10px;
+  }
+}
+.th-order-modal-title {
+  i {
+    margin-right: 23px !important;
+  }
+}
+.th-order-number-item-right {
+  margin-left: 138px;
+  h6 {
+    span {
+      font-weight: 400;
+      color: var(--gray-darker);
+    }
+  }
+  @include respond-to(md) {
+    margin-left: 40px;
+  }
+}
+.th-order-number-item-right-gst {
+  padding: 17px 0;
+}
+.form-check-input {
+  label {
+    font-size: var(--h6-font-size);
+    font-weight: 600;
+    color: var(--gray-darker);
+  }
+}
+.th-order-discount-price {
+  h6 {
+    margin-top: 4px;
+  }
+}
+.th-payment-way-border {
+  margin: 17px 0;
+}
+.th-payment-order-gap {
+  margin-top: 20px !important;
+}
+.th-payment-deposit-gap {
+  margin-top: 5px !important;
+}
+.th-payment-total-order-pay-now {
+  margin-left: 224px !important;
+}
+.th-payment-total-order-standrad-card {
+  margin-left: 129px !important;
+}
+.th-order-soupport-left-gap {
+  padding-left: 0px !important;
+}
+.th-order-modal-pay {
+  margin-top: 14px;
+}
+.th-modal-powerdby {
+  span {
+    margin-left: 34px;
+  }
+}
+.th-order-contact-title-gap {
+  margin-top: 99px !important;
+  margin-bottom: 28px !important;
+  @include respond-to(md) {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+}
+.th-order-modal-header-divider {
+  @include respond-to(md) {
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+  }
+}
+.th-modal-order-payment-top-gap {
+  @include respond-to(md) {
+    margin-top: 0px !important;
+  }
+}

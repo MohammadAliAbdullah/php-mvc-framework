@@ -1,0 +1,98 @@
+<!--==============================
+Book Now and calender
+==============================-->
+<!-- <section id="book-now" class="container th-container">
+    <div class="row">
+        <div class="col-md-5 border-right-gray pr-25">
+            @@include('./header-section.html',{ 
+                "sectionTitle":"Book Now"
+            })
+
+            @@include('../components/book-now-form.html')
+        </div>
+        <div class="col-md-7 ">
+          @@include('../components/calender.html')
+        </div>
+    </div>
+</section> -->
+<!--======== End Book Now Section ========-->
+
+<!--============================== Book Now and calender ==============================-->
+<section id="book-now" data-v-component-booknow>
+    <div class="container th-container">
+        <div class="row">
+        <div class="col-md-5 border-right-gray pr-25">
+            <div class="th-section-header" style="display: block">
+            <div class="th-section-header-wrapper">
+                <h2 class="th-section-title" data-v-booknow-section_title> Book Now </h2>
+                <div class="th-section-subtitle" style="font-size: 16px;">
+
+                </div>
+            </div>
+
+            </div>
+
+
+            <div class="th-booking-form-container">
+            <div class="th-booking-selected-member d-flex align-items-center mb-20">
+                <div class="th-booking-member-avatar">
+                <img src="/img/contact/member-avatar.png" alt="Member Avatar" data-v-booknow-member_image />
+                </div>
+                <div class="th-member-info pb-0">
+                <p class="th-member-position">Meet With</p>
+                <p class="th-member-name" data-v-booknow-name>Devon Lane</p>
+                </div>
+            </div>
+            <form>
+                <div class="th-input-group">
+                <label for="choose-members">Member</label>
+                <select class="form-control th-choices-select" name="choose-members" id="choose-members" placeholder="This is a placeholder">
+                    <option value="superman" selected data-v-booknow-member>Superman</option>
+                    <option value="batman">Batman</option>
+                    <option value="galactus">Galactus</option>
+                    <option value="spawn">Spawn</option>
+                </select>
+                </div>
+                <div class="th-input-group">
+                <label for="choose-location">Location</label>
+                <select class="form-control th-choices-select" name="choose-members" id="choose-location" placeholder="This is a placeholder">
+                    <option value="superman" selected data-v-booknow-location>Superman</option>
+                    <option value="batman">Batman</option>
+                    <option value="galactus">Galactus</option>
+                    <option value="spawn">Spawn</option>
+                </select>
+                </div>
+                <div class="th-input-group">
+                <label for="choose-tour-type">Tour Type</label>
+                <select class="form-control th-choices-select" name="choose-members" id="choose-tour-type" placeholder="This is a placeholder">
+                    <option value="superman" selected data-v-booknow-tour_type>Superman</option>
+                    <option value="batman">Batman</option>
+                    <option value="galactus">Galactus</option>
+                    <option value="spawn">Spawn</option>
+                </select>
+                </div>
+            </form>
+            </div>
+
+        </div>
+        <div class="col-md-7 ">
+            <div class="th-calendar-container">
+            <div class="booking-calendar-wrapper">
+                <div class="th-booking-calendar">
+                <input class="d-none" type="text" placeholder="Select Date.." data-input />
+                </div>
+            </div>
+            <div class="th-timezone-selector pt-50">
+                <h4 data-v-booknow-calendar_title>Time Zone</h4>
+                <div class="th-input-group">
+                <i class="fa-solid fa-globe"></i>
+                <select class="form-control th-choices-select" name="choose-members" id="choose-timezone" placeholder="This is a placeholder"></select>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+  </section>
+  <!--======== End Book Now Section ========-->

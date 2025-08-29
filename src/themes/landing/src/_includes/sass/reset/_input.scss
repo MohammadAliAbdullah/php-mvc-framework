@@ -1,0 +1,125 @@
+select,
+.form-control,
+.form-select,
+textarea,
+input {
+  height: 54px;
+  padding: 15px;
+  border: 1px solid $border;
+  color: $primary;
+  border-radius: 4px;
+  font-size: $body-font-size;
+  width: 100%;
+  font-family: $body-font;
+  transition: $default-transition-duration $default-transition-timing-function;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: $primary;
+    background-color: $gray-lightest;
+  }
+  &.th-from-bg {
+    background-color: transparent;
+    border: 1px solid var(--theme-border);
+    border-radius: 1px;
+  }
+  &.th-from-bg:focus {
+    border-color: var(--black-color);
+  }
+
+  @include inputPlaceholder {
+    color: $text;
+  }
+}
+
+.form-select,
+select {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23$text' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 26px center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+textarea.form-control,
+textarea {
+  min-height: 154px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+}
+
+.form-group {
+  // margin-bottom: var(--container-gutters);
+  position: relative;
+
+  > i {
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 19px;
+    font-size: 16px;
+    color: $text;
+  }
+}
+
+option {
+  &:checked,
+  &:focus,
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+input[type="checkbox"] {
+  &:checked ~ label::before {
+    content: "\f00c";
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+input[type="radio"] {
+  &:checked ~ label::before {
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+label {
+  color: $title;
+  font-family: $body-font;
+  font-size: $body-font-size;
+}
+
+textarea.is-invalid,
+select.is-invalid,
+input.is-invalid {
+  border: 1px solid $error !important;
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.form-messages {
+  display: none;
+  &.success {
+    color: $success;
+    display: block;
+  }
+  &.error {
+    color: $error;
+    display: block;
+  }
+}

@@ -1,0 +1,34 @@
+<!--==============================
+Product Slider Section
+==============================-->
+<section id="th-product-slider" class="gr-bg8">
+    <div class="container th-container">
+        <div class="row">
+            @@include('./header-section.html',{ 
+                "sectionTitle":"Featured Products",
+                "sectionSubtitle":"Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.",
+                "sectionLinkText":"View All Products",
+                "sectionClass":"left flex-1",
+                "sectionRightClass":"right",
+                "fontSize":"20px !important"
+            })
+
+            <div class="th-section-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swiper th-featured-products-slider">
+                            <div class="swiper-wrapper">
+                                @@loop("../components/item-product-slider.html", "./data/products-slider.json")
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==============================
+End Product Slider Section
+==============================-->

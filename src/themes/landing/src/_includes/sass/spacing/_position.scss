@@ -1,0 +1,56 @@
+/*-- position Top And Right --*/
+@for $i from 1 through $space-count {
+  .top-right-#{5 * $i} {
+    top: 5px *$i;
+    right: 5px *$i;
+  }
+}
+
+/*-- position Top and Left --*/
+@for $i from 1 through $space-count {
+  .top-left-#{5 * $i} {
+    top: 5px *$i;
+    left: 5px *$i;
+  }
+}
+
+/*-- position Bottom and Right --*/
+@for $i from 1 through $space-count {
+  .bottom-right-#{5 * $i} {
+    bottom: 5px *$i;
+    right: 5px *$i;
+  }
+}
+
+/*-- position Bottom and Left --*/
+@for $i from 1 through $space-count {
+  .bottom-left-#{5 * $i} {
+    bottom: 5px *$i;
+    left: 5px *$i;
+  }
+}
+
+/*-- position Top --*/
+@for $i from 1 through $space-count {
+  .top-#{5 * $i} {
+    top: 5px *$i;
+  }
+}
+/*-- position Bottom --*/
+@for $i from 1 through $space-count {
+  .bottom-#{5 * $i} {
+    bottom: 5px *$i;
+  }
+}
+/*-- position left --*/
+@for $i from 1 through $space-count {
+  .left-#{5 * $i} {
+    left: 5px *$i;
+  }
+}
+/*-- position Right --*/
+@for $i from 1 through $space-count {
+  .right-#{5 * $i} {
+    right: 5px *$i;
+  }
+}

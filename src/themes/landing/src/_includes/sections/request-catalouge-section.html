@@ -1,0 +1,99 @@
+<!-- <section id="th-request-catalouge" class="th-request-contact gr-bg8-sm">
+    <div class="container th-container">
+        <div class="row">
+            <div class="section-body">
+                <div class="row">
+                   <div class="col-md-7 col-sm-12">
+                        <div class="th-requset-catalouge-content">
+                            <h2>Request Catalogue</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur. Egestas orci gravida amet<br> egestas et. Pellentesque libero donec sit egestas orci.</p>
+                        </div>
+                        <div class="th-img-container th-request-catalouge-img">
+                            <img src="/img/contact/contact-location-one.jpeg"  alt="">
+                        </div>
+                   </div>
+                   <div class="col-md-5 col-sm-12">
+                    <div class="th-request-catalouge-form">
+                        
+                        @@include('../components/contact-us-from.html',{
+                            class: 'th-bg-cf-white',
+                            btn_class: 'th-btn-primary'
+                        })    
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>     -->
+
+
+<section id="th-request-catalouge" class="th-request-contact gr-bg8-sm" data-v-component-requestcatalogue>
+    <div class="container th-container">
+      <div class="row">
+        <div class="section-body">
+          <div class="row">
+            <div class="col-md-7 col-sm-12">
+              <div class="th-requset-catalouge-content">
+                <h2 data-v-requestcatalogue-section_title>Request Catalogue</h2>
+                <p data-v-requestcatalogue-section_subtitle>Lorem ipsum dolor sit amet consectetur. Egestas orci gravida amet
+                  <br> egestas et. Pellentesque libero donec sit egestas orci.
+                </p>
+              </div>
+              <div class="th-img-container th-request-catalouge-img">
+                <img src="/img/contact/contact-location-one.jpeg" alt="" data-v-requestcatalogue-image>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <div class="th-request-catalouge-form">
+
+                <div class="form-container th-cf-wrapper overlap th-bg-cf-white">
+                  <form>
+                    <div class="form-group">
+                      <label for="email" >Email* (required)</label>
+                      <input type="email" id="email" class="form-control" placeholder="Email*" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="company">Company Name* (required)</label>
+                      <input type="text" id="company" class="form-control" placeholder="Company Name*" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="full-name" >Full Name* (required)</label>
+                      <input type="text" id="full-name" class="form-control" placeholder="Full Name*" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="type" >Type</label>
+                      <select id="type" class="form-control">
+                        <option value="" disabled selected>Type</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                      </select>
+                    </div>
+                    <!-- File Upload -->
+                    <div class="upload-section">
+                      <p>Drag and Drop or Click to Upload File</p>
+                      <input type="file" class="file-input">
+                    </div>
+                    <!-- Text Area -->
+                    <div class="form-group">
+                      <label for="message">Add Text</label>
+                      <div class="text-section">
+                        <textarea class="form-control" placeholder="Enter your message"></textarea>
+                      </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                      <button type="submit" class="th-btn-primary mt-30">
+                        Submit <span>&#8599;</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

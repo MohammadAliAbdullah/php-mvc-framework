@@ -1,0 +1,7 @@
+
+  .th-asidebar-sellector-form {
+    margin-right: 40px;
+    @include respond-to(md) {
+      margin-right: 0;
+    }
+  }

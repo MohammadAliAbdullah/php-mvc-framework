@@ -1,0 +1,21 @@
+.th-login {
+    .th-login-form-header{
+        text-align: center;
+        margin-bottom: 55px;
+        p{
+            font-size: 18px;
+        }
+    }
+    .th-login-form-container{
+        max-width: 525px;
+        margin: 0 auto;
+    }
+    .th-img-container {
+        img {
+            max-height: 925px;
+        }
+        @include respond-to(mds) {
+            display: none
+        }
+    }
+}

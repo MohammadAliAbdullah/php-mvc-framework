@@ -1,0 +1,17 @@
+.custom-search-box {
+  border: none;
+  border-bottom: 2px solid $primary;
+  border-radius: 0;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.custom-search-box::placeholder {
+  font-size: var(--h5-font-size);
+  color: #888;
+}
+
+.custom-search-box:focus {
+  border-bottom: 2px solid #007bff;
+}

@@ -1,0 +1,15 @@
+.th-our-history-info-wrapper{
+    padding-left: 30px; 
+    padding-top: 94px;
+    padding-bottom: 68px;
+    @include respond-to(sm){
+        padding-left: 0;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+   
+}
+
+.th-our-history-info-two{
+    padding-top: 72px;
+}

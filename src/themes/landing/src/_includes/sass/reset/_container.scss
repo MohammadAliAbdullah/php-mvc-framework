@@ -1,0 +1,45 @@
+:root {
+    --main-container: #{map-get($container-widths, lg)};
+    --container-gutters: #{map-get($container-gutters, lg)};
+    --border-radius-round: 0px;
+}
+.th-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Apply CSS variable changes inside :root using media queries */
+@each $breakpoint, $bp-value in $breakpoints {
+    @include respond-to($breakpoint) {
+        :root {
+            --main-container: #{map-get($container-widths, $breakpoint)};
+            --container-gutters: #{map-get($container-gutters, $breakpoint)};
+        }
+    }
+}
+
+@each $breakpoint, $bp-value in $breakpoints {
+    @include respond-to($breakpoint) {
+        .th-container, th-container-#{$breakpoint} {
+            max-width: var(--main-container);
+            padding-left: calc(var(--container-gutters) / 2);
+            padding-right: calc(var(--container-gutters) / 2);
+        }
+    }
+}
+
+
+// Round Container
+.round-container {
+    max-width: 1620px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--border-radius-round);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.flex-1{
+    flex: 1;
+}
+

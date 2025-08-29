@@ -1,0 +1,464 @@
+/*
+Template Name: SA Technology
+Template URL: https://satechnology.com.au
+Description: Integrated Customised Ecommerce Solution
+Author: Shofiul Alam
+Author URI: https://satechnology.com.au
+Version: 1.0.0
+*/
+/*=================================
+    CSS Index Here
+==================================*/
+/*
+01. Theme Base
+    1.1. Mixin
+    1.2. Function
+    1.3. Variable
+    1.4. Bootstrap
+    1.5. Extend
+    1.6. themes
+    1.6. Typography
+02. Reset
+    2.1. Container
+    2.2. Grid
+    2.3. Input
+    2.4. Slider
+    2.5. Mobile Menu
+03. Utilities
+    3.1. Preloader
+    3.2. Buttons
+    3.3. Titles
+    3.4. Common
+    3.6. Font
+    3.7. Background
+    3.8. Text Color
+    3.9. Overlay
+    3.10. Animation
+    
+04. Template Style
+    4.1. Widget
+    4.2. Header
+    4.3. Footer
+    4.4. Breadcumb
+    4.5. Pagination
+    4.6. Blog
+    4.7. Comments
+    4.8. Hero Area
+    4.9. Error    
+    4.00. Popup Search
+    4.00. Popup Side Menu
+    4.00. Wocommerce
+    4.00. Products
+    4.00. Cart
+    4.00. Checkout
+    4.00. Pinboard
+    4.00. Wishlist
+    4.00. Contact
+    4.00. About
+    4.00. Team
+    4.00. Testimonial
+    4.00. Counter
+    4.00. Blog
+    4.00. Brand
+    4.00. Simple Sections
+    4.00. Why
+    4.00. Faq
+    4.00. CTA
+    4.00. Service
+    4.00. Pricing
+    4.00. Gallery
+    4.00. Skill
+    4.00. Process
+    4.00. Particle
+    4.00. Feature
+
+05. Spacing
+
+*/
+/*=================================
+    CSS Index End
+==================================*/
+
+/*=================================
+   01. Theme Base
+==================================*/
+/*------------------- 1.0. Bootstrap -------------------*/
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/*------------------- 1.1. Variables -------------------*/
+@import "base/variable";
+
+/*------------------- 1.2. Mixin -------------------*/
+@import "base/mixin";
+
+/*------------------- 1.3. Functions-------------------*/
+@import "base/function";
+
+/*------------------- 1.6. Typography -------------------*/
+@import "base/typography";
+
+/*------------------- 1.7. Extend -------------------*/
+@import "base/extend";
+
+/*------------------- 1.8. Theme -------------------*/
+@import "base/themes";
+
+/*=================================
+    02. Reset
+==================================*/
+/*------------------- 2.1. Grid -------------------*/
+@import "reset/grid";
+
+/*------------------- 2.2. Container -------------------*/
+@import "reset/container";
+
+/*------------------- 2.3. Input -------------------*/
+@import "reset/input";
+
+/*------------------- 2.4. Slider -------------------*/
+@import "reset/slider";
+
+/*------------------- 2.5. Mobile Menu -------------------*/
+@import "reset/thmenu";
+
+/*=================================
+    03. Utilities
+==================================*/
+/*------------------- 3.1. Preloader -------------------*/
+@import "utilities/preloader";
+
+/*------------------- 3.10. Animation -------------------*/
+@import "utilities/animation";
+
+/*------------------- 3.2. Buttons -------------------*/
+@import "utilities/btns";
+
+/*------------------- 3.3. Titles -------------------*/
+@import "utilities/titles";
+
+/*------------------- 3.4. Common -------------------*/
+@import "utilities/common";
+
+/*------------------- 3.6. Font -------------------*/
+@import "utilities/font";
+
+/*------------------- 3.7. Background -------------------*/
+@import "utilities/background";
+
+/*------------------- 3.8. Text Color -------------------*/
+@import "utilities/text-color";
+
+/*------------------- 3.9. Overlay -------------------*/
+@import "utilities/overlay";
+
+///*=================================
+//    04. Template Style
+//==================================*/
+///*------------------- 4.1. Widget  -------------------*/
+//@import 'template/widgets/widget-default-list';
+//@import 'template/widgets/widget-sidebar';
+//@import 'template/widgets/widget-footer';
+//
+//
+/*------------------- 4.2. Header  -------------------*/
+@import "template/headers/header";
+
+/*------------------- 4.3. Footer  -------------------*/
+@import "template/footers/footer";
+
+///*------------------- 4.4. Breadcumb  -------------------*/
+//@import 'template/breadcumb/breadcumb-v1';
+//
+///*------------------- 4.5. Pagination  -------------------*/
+//@import 'template/sections/pagination-v1';
+//
+///*------------------- 4.6. Blog  -------------------*/
+//@import 'template/sections/blog';
+//
+///*------------------- 4.7. Comments  -------------------*/
+//@import 'template/sections/comments';
+//
+/*------------------- 4.8. Hero Area  -------------------*/
+// @import "template/sections/hero";
+
+// /*------------------- 4.9. Error  -------------------*/
+// @import "template/sections/error";
+
+///*------------------- 4.00. Popup Search  -------------------*/
+//@import 'template/sections/popupsearch-v1';
+//
+///*------------------- 4.00. Popup Side Menu  -------------------*/
+//@import 'template/sections/sidemenu-v1';
+//
+///*------------------- 4.00. Wocommerce  -------------------*/
+//@import 'template/sections/woocommerce';
+//
+///*------------------- 4.00. Products  -------------------*/
+//@import 'template/sections/products';
+//
+///*------------------- 4.00. Cart  -------------------*/
+//@import 'template/sections/cart';
+//
+///*------------------- 4.00. Checkout  -------------------*/
+//@import 'template/sections/checkout';
+//
+///*------------------- 4.00. Wishlist  -------------------*/
+//@import 'template/sections/wishlist';
+//
+///*------------------- 4.00. Contact  -------------------*/
+//@import 'template/sections/contact';
+//
+///*------------------- 4.00. About  -------------------*/
+//@import 'template/sections/about';
+//
+///*------------------- 4.00. Team  -------------------*/
+//@import 'template/sections/team';
+//
+///*------------------- 4.00. Testimonial  -------------------*/
+//@import 'template/sections/testimonial';
+//
+///*------------------- 4.00. Counter  -------------------*/
+//@import 'template/sections/counter';
+//
+///*------------------- 4.00. Blog  -------------------*/
+//@import 'template/sections/blog-extra';
+//
+///*------------------- 4.00. Brand  -------------------*/
+//@import 'template/sections/brand';
+//
+/*------------------- 4.00. Sections  -------------------*/
+// @import "template/sections/section";
+
+///*------------------- 4.00. Why -------------------*/
+//@import 'template/sections/why';
+//
+///*------------------- 4.00. Faq -------------------*/
+//@import 'template/sections/faq';
+//
+///*------------------- 4.00. CTA -------------------*/
+//@import 'template/sections/cta';
+//
+///*------------------- 4.00. Service -------------------*/
+//@import 'template/sections/service';
+//
+///*------------------- 4.00. Pricing -------------------*/
+//@import 'template/sections/pricing';
+//
+///*------------------- 4.00. Gallery -------------------*/
+//@import 'template/sections/gallery';
+//
+///*------------------- 4.00. Project -------------------*/
+//@import 'template/sections/project';
+//
+///*------------------- 4.00. Skill -------------------*/
+//@import 'template/sections/skill';
+//
+///*------------------- 4.00. Marquee -------------------*/
+//@import 'template/sections/marquee';
+//
+///*------------------- 4.00. Process -------------------*/
+//@import 'template/sections/process';
+//
+///*------------------- 4.00. Particle -------------------*/
+//@import 'template/sections/particle';
+//
+///*------------------- 4.00. Feature -------------------*/
+//@import 'template/sections/feature';
+//
+///*------------------- 4.00. Screenshot -------------------*/
+//@import 'template/sections/screenshot';
+//
+///*------------------- 4.00. Color Scheme -------------------*/
+//@import 'template/sections/color-plate';
+//
+//
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-categories";
+
+// //
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-featured-projects";
+
+// //
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-slogan";
+
+// //
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-design-resources";
+
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-featured-products";
+
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_home-blogs";
+
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/_need-help";
+
+// /*------------------- 4.00. Home Categories -------------------*/
+// @import "template/sections/masonry-two-column";
+
+// /*------------------- 4.00. Category Hero-------------------*/
+
+// @import "template/sections/categories/category-hero";
+
+// /*------------------- 4.00. About Hero Categories -------------------*/
+// @import "template/sections/about/about-hero";
+// /*------------------- 4.00. About Principle Categories -------------------*/
+// @import "template/sections/about/_about-principle";
+// /*------------------- 4.00. About Principle Categories -------------------*/
+// @import "template/sections/about/about-principle-card";
+
+// /*------------------- 4.00. About Principle Categories -------------------*/
+// @import "template/sections/about/about-masonary";
+// /*------------------- 4.00. About Manufacturing Categories -------------------*/
+// @import "template/sections/about/about-manufacturing";
+
+// /*------------------- 4.00. About Who You Are Categories -------------------*/
+// @import "template/sections/about/about-who-you";
+// /*------------------- 4.00. About Who You Are Categories -------------------*/
+// @import "template/sections/about/about-videoplayer";
+// /*------------------- 4.00. About History Categories -------------------*/
+// @import "template/sections/about/about-history";
+// /*------------------- 4.00. About History Categories -------------------*/
+// @import "template/sections/about/_about-supplayer";
+
+// @import "template/sections/categories/category-hero";
+
+// /*------------------- 4.00. Category Page Item-------------------*/
+// @import "template/sections/categories/category-item";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-hero";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-feature";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-configurator";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-tab";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-ocean-bound-plastic";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-circle";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-archi";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-also-like";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/product-detail/_product-detail-connect";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/project-detail/_project-detail-brief";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/project-detail/_project-detail-gallery";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/project-detail/_project-detail-penetrating";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/project-detail/_project-detail-featured-material";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/contact/contact-showroom";
+
+// /*------------------- 4.00. Category Workstation-------------------*/
+// @import "template/sections/contact/contact-booking";
+
+// /*------------------- 4.00. Contact Getin Touch-------------------*/
+// @import "template/sections/contact/contact-getin-touch";
+
+// /*------------------- 4.00. Categlogue -------------------*/
+// @import "template/sections/catelogue/catelogue";
+
+// @import "template/sections/categories/_categories-masonry";
+
+// /*------------------- 4.00. Projects -------------------*/
+// @import "template/sections/projects/projects-hero";
+// /*------------------- 4.00. Projects List-------------------*/
+// @import "template/sections/projects/projects-list";
+/*------------------- 4.00. Projects Feature-------------------*/
+//@import "template/sections/projects/projects-feature"; (Do not use it)
+
+/*------------------- 4.00. Design Resources -------------------*/
+// @import "template/sections/design-resources/desgin-resources";
+
+// /*------------------- 4.00. Design Resources -------------------*/
+
+// @import "template/sections/blog-detail/blog-detail";
+
+// /*------------------- 4.00. Design Resources -------------------*/
+// @import "template/sections/blog-detail/blog-detail-hero";
+
+// /*------------------- 4.00. Design Resources -------------------*/
+// @import "template/sections/blog-detail/blog-detail-section-collapse";
+
+// /*------------------- 4.00. Design Resources -------------------*/
+// @import "template/sections/blog-detail/blog-detail-gallery";
+
+// /*------------------- 4.00. Solution -------------------*/
+// @import "template/sections/solution/solution-our-statistics";
+
+// /*------------------- 4.00. Solution Customizable -------------------*/
+// @import "template/sections/solution/solution-customizable";
+
+// /*------------------- 4.00. Solution Our Principle -------------------*/
+// @import "template/sections/solution/solution-our-principle";
+
+/*------------------- 4.00. Contact Us -------------------*/
+// @import "template/sections/contact-us/_contact-design-process";
+
+/*------------------- 4.00. Design Resources -------------------*/
+@import "sections/dashboard/account-dashboard-active-quote";
+
+// /*------------------- 4.00. Dashboard -------------------*/
+// @import "template/sections/account-dashboard-active-quotes/dashboard";
+
+// /*------------------- 4.00. Grid -------------------*/
+// @import "template/sections/account-dashboard-active-quotes/grid-table";
+
+// /*------------------- 4.00. Home Product -------------------*/
+// @import "template/sections/product/product-details";
+// @import "template/sections/product/_product-hero";
+
+// @import "template/sections/account-dashboard/account-dashboard-recent-order";
+
+// /*------------------- 4.00. Dashboard Vartual Pinoard -------------------*/
+// @import "template/sections/account-dashboard-pinboard/pinboard";
+// @import "template/sections/account-dashboard-pinboard/account-dashboard-pinboard-item";
+// @import "template/sections/account-dashboard-pinboard/dashboard-pinboard-comment";
+
+
+
+// /*------------------- 4.00. Projects List-------------------*/
+// @import "template/sections/pinboard/_pinboard";
+
+// /*------------------- 4.00. Projects List-------------------*/
+// @import "template/sections/blog-page/_blog-page-whats-happening";
+
+// /*------------------- 4.00. Projects List-------------------*/
+// @import "template/sections/blog-page/_blog-page-latest-news";
+
+// /*------------------- 1.4. Item Number Card -------------------*/
+// @import "components/item-number-card";
+
+
+// @import "template/sections/account-dashboard-delivery-install/dashboard-delivery-install";
+
+// @import "template/sections/account-dashboard-track-order/_dashboard-track-order";
+
+
+
+/*=================================
+    05. Spacing
+==================================*/
+@import "spacing/spacing";

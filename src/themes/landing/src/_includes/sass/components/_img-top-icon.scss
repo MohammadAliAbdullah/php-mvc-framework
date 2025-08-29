@@ -1,0 +1,23 @@
+.th-image-top-icon-item {
+  .th-img-container {
+    overflow: hidden;
+  }
+
+  .th-top-icon-link {
+    position: absolute;
+    bottom: 38px;
+    left: 87px;
+    padding: 10px;
+
+    .th-section-header-link-text {
+      color: $white;
+      font-size: var(--h5-font-size);
+    }
+    .th-section-header-link-icon {
+      i {
+        color: $white;
+        font-size: var(--h5-font-size);
+      }
+    }
+  }
+}

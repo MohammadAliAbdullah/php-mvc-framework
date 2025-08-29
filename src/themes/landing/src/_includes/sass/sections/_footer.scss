@@ -1,0 +1,119 @@
+
+@include respond-to(sm) {
+    .th-footer {
+        font-size: 12px!important;
+    }
+}
+.th-footer-navigation,
+.th-footer-follow{
+    padding-left: 50px;
+    @include respond-to(lg){
+        padding-left: 10px!important;
+    }
+    @include respond-to(md){
+        padding-top: 50px;
+        padding-left: 0px!important;
+    }
+
+}
+
+.th-subscription{
+    @include respond-to(lg){
+      padding-left: 10px!important;
+    }
+    @include respond-to(md){
+      padding-top: 50px;
+      padding-left: 0px!important;
+    }
+    .th-subscription-heading {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      align-items: center;
+      .th-subscription-icon{
+        font-size: 50px;
+        line-height: 50px;
+      }
+      .th-subscription-details{
+        .description{
+          padding-top: 10px;
+        }
+      }
+      @include respond-to(sm){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .th-subscription-form{
+      display: flex;
+      margin-bottom: 30px;
+      input{
+        width: 345px;
+      }
+    }
+    @include respond-to(lg){
+      .th-subscription-form{
+        flex-direction: row;
+        input{
+          width: 300px;
+        }
+      }
+    }
+    @include respond-to(sm){
+      .th-subscription-details{
+        .sub-title{
+          font-size: 17px;
+        }
+        .description{
+          font-size: 14px;
+        }
+      }
+      .th-subscription-form{
+        flex-direction: row;
+        .pr-15{
+          padding-right:5px;
+        }
+        .link{
+          .link-text{
+            font-size: 13px;
+          }
+        }
+        input{
+          width: 175px;
+          font-size: 13px;
+          padding: 5px;
+          height: 40px;
+        }
+      }
+      .th-footer-navigation{
+        ul {
+          li{
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  .th-footer-navigation{
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        display: inline-block;
+        padding: 0 20px;
+        border-right: 1px solid $border;
+      }
+    }
+  }
+  .social-media{
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+  }
+  

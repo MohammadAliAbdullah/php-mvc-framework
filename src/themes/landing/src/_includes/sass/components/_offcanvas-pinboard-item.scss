@@ -1,0 +1,21 @@
+/** ===============================
+Offcanvas Pinboard Item
+=============================== */
+.th-pinboard-item{
+  border-bottom: 1px solid $gray;
+  padding-bottom: 55px;
+  margin-bottom: 55px;
+  .th-pinboard-img{
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray;
+    img{
+      padding: 0;
+    }
+  }
+}
+/** ===============================
+Offcanvas Pinboard Item End
+=============================== */

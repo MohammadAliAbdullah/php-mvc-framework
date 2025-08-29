@@ -1,0 +1,21 @@
+.th-head-tab-navigation-container {
+    padding-top: 0px;
+    margin-bottom: 121px;
+    @include respond-to(md) {
+      padding-top: 10px;
+    }
+    .th-rm-gap {
+      padding-bottom: 80px;
+    }
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      color: var(--black-color) !important;
+      background-color: white;
+      border-bottom: 2px solid black;
+    }
+   
+
+
+  }
+  
+  

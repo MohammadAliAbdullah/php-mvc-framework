@@ -1,0 +1,72 @@
+.booking-calendar-wrapper {
+  width: 100%;
+  padding: 0 60px;
+  @include respond-to(mds) {
+    padding: 70px 0;
+  }
+}
+.flatpickr-calendar.open,
+.flatpickr-calendar.inline {
+  max-height: 100%;
+  width: 100%;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.flatpickr-months {
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 45px;
+  .flatpickr-prev-month.flatpickr-prev-month,
+  .flatpickr-prev-month,
+  .flatpickr-prev-month.flatpickr-next-month,
+  .flatpickr-next-month {
+    position: relative;
+    left: inherit;
+  }
+  .flatpickr-month {
+    -webkit-box-flex: inherit;
+    -webkit-flex: inherit;
+    -ms-flex: inherit;
+    flex: inherit;
+    align-items: center;
+    .flatpickr-current-month {
+      display: flex;
+      text-align: center;
+      width: 250px;
+      position: relative;
+    }
+  }
+}
+
+.flatpickr-rContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.flatpickr-days {
+  width: 100%;
+}
+.dayContainer {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.flatpickr-day {
+  margin: 0;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bolder;
+  width: 100%;
+  max-width: inherit;
+  max-height: inherit;
+  border-radius: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}

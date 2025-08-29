@@ -1,0 +1,25 @@
+.th-item-project {
+    .th-list-img {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 17px;
+        width: 100%;
+        img {
+        @include respond-to-min(xs) {
+            width: 100%;
+        }
+        }
+    }
+    .th-item-footer {
+        .th-description {
+            margin-top: 9px;
+            margin-bottom: 13px;  
+        }
+        .th-label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+    }
+
+}

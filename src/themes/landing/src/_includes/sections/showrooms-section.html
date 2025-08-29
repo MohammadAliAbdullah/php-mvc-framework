@@ -1,0 +1,104 @@
+<!-- <section id="th-showrooms">
+    <div class="container th-container">
+        <div class="row">
+            @@include('./header-section.html',{ 
+                "sectionTitle":"Our Locations",
+                "sectionSubtitle":"Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.",
+                "sectionClass":"text-center",
+            })
+            <div class="section-body th-showroom">
+                <div class="row">
+                    @@loop("../components/item-showroom.html", "./data/showrooms.json")
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="th-showrooms" data-v-component-showrooms>
+    <div class="container th-container">
+      <div class="row">
+        <div class="th-section-header" style="display: block">
+          <div class="th-section-header-wrapper text-center">
+            <h2 class="th-section-title" data-v-showrooms-section_title> Our Locations </h2>
+            <div class="th-section-subtitle" style="font-size: 16px;" data-v-showrooms-section_subtitle>
+              Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-body th-showroom">
+          <div class="row showroom-list">
+            <div class="col-md-6 showroom-item">
+              <div class="th-item-showroom pb-0">
+                <div class="th-img-container">
+                  <img src="/img/contact/contact-location-one.jpeg" alt="Showroom Location" data-v-showroomitem-image />
+                </div>
+                <div class="th-item-showroom-information">
+                  <h3 class="title th-showroom-title" data-v-showroomitem-title>Sydney Showroom </h3>
+
+                  <p class="showroom-opening font-weight-500" data-v-showroomitem-opening_time>Open Weekdays, 8am to 5pm</p>
+
+
+                  <div class="showroom-address-container d-flex align-items-center mt-5">
+                    <i class="fa-solid fa-location pr-5"></i>
+                    <p class="showroom-address" data-v-showroomitem-address>33 Ricketty Street Mascot NSW, 2020</p>
+                  </div>
+
+                  <div class="th-call-to-action d-flex mt-30">
+                    <div class="link pr-40">
+                      <div class="link-text pr-5" data-v-showroomitem-book_btn>Book a Tour </div>
+                      <div class="link-icon">
+                        <i class="fa-regular fa-arrow-right"></i>
+                      </div>
+                    </div>
+                    <div class="link">
+                      <div class="link-text pr-5" data-v-showroomitem-view_btn>View On Map </div>
+                      <div class="link-icon">
+                        <i class="fa-regular fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 showroom-item">
+              <div class="th-item-showroom pb-0">
+                <div class="th-img-container">
+                  <img src="/img/contact/contact-location-two.png" alt="Showroom Location" />
+                </div>
+                <div class="th-item-showroom-information">
+                  <h3 class="title th-showroom-title">Melbourne Showroom </h3>
+
+                  <p class="showroom-opening font-weight-500">Open Weekdays, 8am to 5pm</p>
+
+
+                  <div class="showroom-address-container d-flex align-items-center mt-5">
+                    <i class="fa-solid fa-location pr-5"></i>
+                    <p class="showroom-address">33 Ricketty Street Mascot NSW, 2020</p>
+                  </div>
+
+                  <div class="th-call-to-action d-flex mt-30">
+                    <div class="link pr-40">
+                      <div class="link-text pr-5">Book a Tour </div>
+                      <div class="link-icon">
+                        <i class="fa-regular fa-arrow-right"></i>
+                      </div>
+                    </div>
+                    <div class="link">
+                      <div class="link-text pr-5">View On Map </div>
+                      <div class="link-icon">
+                        <i class="fa-regular fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

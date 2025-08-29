@@ -1,0 +1,115 @@
+<!--==============================
+What's Happening
+==============================-->
+<!-- <section class="whats-happening-background pt-30">
+    <div class="container th-container">
+        @@include('../components/breadcrumb.html', @@breadcrumb_data)
+        <div class="section-body mt-25">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12">
+                    <div class=" whats-happening">
+                        <h1>WHAT'S HAPPENING?</h1>
+                    </div>
+                    <div class="whats-happening-left mt-50" style="background-image: url('/img/blog-page/whats-happening-left.png');">
+                        <div class="th-member-info-container">
+                            @@include('../components/all-btn/btn-white-large.html', {
+                                "btnName": "Read More"
+                            })
+                        </div>
+                    </div>
+
+                    <div class="whats-happening-content">
+                        <h2>Embracing Human-Centric Design: A Path to Enhanced Usability and Experience</h2>
+                        <p>Sit egestas orci consequat est mauris duis. In viverra hac vestibulum pretium.</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-5 col-md-12 th-whats-happening-right">
+                    <div class="whats-happening-right">
+                        @@loop("../components/whats-happening-item.html", "./data/whats-happening-items.json")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!--============================== What's Happening ==============================-->
+<div class="whats-happening-background pt-30">
+    <div class="container th-container">
+      <div class="th-breadcrumb">
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#" >Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+          </ol>
+        </div>
+      </div>
+      <div class="section-body whats-happening-container" data-v-component-whatishappening>
+        <div class="row">
+          <!-- Left Side -->
+          <div class="col-md-7">
+            <div class="whats-happening">
+              <h1 data-v-whatishappening-section_title>WHAT'S HAPPENING?</h1>
+            </div>
+            <div class="whats-happening-left mt-50" data-v-whatishappening-image style="background-image: url('/img/blog-page/whats-happening-left.png');">
+              <div class="th-member-info-container">
+                <div class="link read-more th-white-link">
+                  <div class="link-text pr-20 font-weight-600 font-white" data-v-whatishappening-link_text>Read More</div>
+                  <div class="link-icon-btn-white-large">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content below the image -->
+            <div class="whats-happening-content">
+              <h2 data-v-whatishappening-below_title>Embracing Human-Centric Design: A Path to Enhanced Usability and Experience</h2>
+              <p data-v-whatishappening-below_description>Sit egestas orci consequat est mauris duis. In viverra hac vestibulum pretium.</p>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-md-5 th-whats-happening-right" data-v-whatishappening-right>
+            <div class="whats-happening-right">
+              <div class="row align-items-center right-item">
+                <div class="col-md-7 col-sm-7">
+                  <p class="th-underline" data-v-whatishappeningitem-title>Bayside City Council - Youth Centre Opening</p>
+                </div>
+                <div class="col-md-5 col-sm-5">
+                  <div class="upper-img">
+                    <img src="/img/blog-page/upper img.png" alt="" data-v-whatishappeningitem-image>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center right-item">
+                <div class="col-md-7 col-sm-7">
+                  <p class="th-underline">Kenni - A Class Of Its Own</p>
+                </div>
+                <div class="col-md-5 col-sm-5">
+                  <div class="upper-img">
+                    <img src="/img/blog-page/middle img.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center right-item">
+                <div class="col-md-7 col-sm-7">
+                  <p class="th-underline">An Arena For Innovative Collaboration</p>
+                </div>
+                <div class="col-md-5 col-sm-5">
+                  <div class="upper-img">
+                    <img src="/img/blog-page/lower img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--============================== What's Happening End ==============================-->

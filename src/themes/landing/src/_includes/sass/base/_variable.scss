@@ -1,0 +1,269 @@
+:root {
+  --theme-primary: #231f20;
+  --theme-secondary: #33322f;
+  --gray-darker: #5a5a5a;
+  --gray-color: #eaeaec;
+  --gray-color-rgb: 234 234 236;
+  --gray-light: #e6e6e6;
+  --gray-lighter: #f5f5f5;
+  --gray-lightest: #fffafa;
+  --white-color: #ffffff;
+  --theme-title: var(--theme-secondary);
+  --theme-body: var(--gray-lightest);
+  --theme-text: var(--theme-secondary);
+  --theme-link: #2b4569;
+  --theme-warning: #ffb539;
+  --theme-success: #28a745;
+  --theme-error: #dc3545;
+  --theme-border: #d1d1d1;
+  --title-font: "Open Sans", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+  --body-font-size: 15px;
+  --h1-font-size: 70px;
+  --h2-font-size: 40px;
+  --h3-font-size: 30px;
+  --h4-font-size: 28px;
+  --h5-font-size: 26px;
+  --h6-font-size: 24px;
+  --h3-title-font-size: 24px;
+  --h6-22-font-size: 22px;
+  --h6-20-font-size: 20px;
+  --h6-17-font-size: 17px;
+  --h6-18-font-size: 18px;
+  --black-color: #000000;
+  --overlay: #080e1c;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1220px;
+  --ripple-ani-duration: 5s;
+  --card-list-color: #9d9d9d;
+  --tab-card-heading-size: 22px;
+  //Section Spacing
+  --section-space: 80px;
+  --section-space-mobile: 40px;
+  --section-title-space: 50px;
+  --section-title-mobile-space: 20px;
+
+  //Image Spacing
+  --image-space: 30px;
+  --image-space-mobile: 25px;
+  --image-space-extra: calc(var(--image-space) + 20px);
+  --image-space-mobile-extra: calc(var(--image-space-mobile) + 20px);
+
+  //Grid Gap
+  --grid-gap: 58px;
+  --column-gap: 108px;
+
+  //Container Variables
+  --main-container-default: 1250px;
+  --main-container-large: 1470px;
+  --main-container-xl: 1720px;
+  --container-gutters: 30px;
+  --border-radius-round: 20px;
+
+  //Swiper Theme colors
+  --swiper-theme-color: var(--theme-primary);
+
+  //form
+  --label-font-size: 18px;
+}
+
+// Color Variables
+
+//Theme Colors
+$primary: var(--theme-primary);
+$secondary: var(--theme-secondary);
+$title: var(--theme-title);
+$body: var(--theme-body);
+$text: var(--theme-text);
+$link: var(--theme-link);
+$warning: var(--theme-warning);
+$success: var(--theme-success);
+$error: var(--theme-error);
+$border: var(--theme-border);
+
+//Other Colors
+$black: var(--black-color);
+$gray-darker: var(--gray-darker);
+$gray: var(--gray-color);
+$gray-light: var(--gray-light);
+$gray-lighter: var(--gray-lighter);
+$gray-lightest: var(--gray-lightest);
+$white: var(--white-color);
+$overlay: var(--overlay);
+
+// Font Variation & Typography
+$title-font: var(--title-font);
+$body-font: var(--body-font);
+$icon-font: var(--icon-font);
+$body-font-size: 16px;
+$body-line-height: 26px; // Use hyphens for better readability
+$body-font-weight: 400;
+$body-line-height: 1.75;
+
+// Define Device Breakpoints
+$breakpoints: (
+  hd: 1880px,
+  xxl: 1600px,
+  xl: 1399px,
+  ml: 1299px,
+  lg: 1199px,
+  md: 991px,
+  mds: 767px,
+  sm: 540px,
+  xs: 389px,
+  vxs: 330px,
+);
+
+// Define Container Widths per Device
+$container-widths: (
+  hd: 1780px,
+  xxl: 1600px,
+  xl: 1399px,
+  ml: 1299px,
+  lg: 1199px,
+  md: 991px,
+  mds: 767px,
+  sm: 540px,
+  vxs: 99%,
+  xs: 99%,
+);
+
+// Define Gutters
+$container-gutters: (
+  hd: 260px,
+  xxl: 260px,
+  xl: 50px,
+  ml: 50px,
+  lg: 50px,
+  md: 50px,
+  mds: 50px,
+  sm: 20px,
+  xs: 20px,
+  vxs: 20px,
+);
+
+// Spacing Count with 5x
+$space-count: 10;
+$space-count2: 10;
+
+// Section Space  For large Device
+$space: var(--section-space);
+$space-extra: calc(var(--section-space) + 30px);
+$space-extra2: calc(var(--section-space) + 40px);
+
+// Section Space On small Device
+$space-mobile: var(--section-space-mobile);
+$space-mobile-extra: calc(var(--section-space-mobile) + 30px);
+$space-mobile-extra2: calc(var(--section-space-mobile) + 40px);
+
+// Image Space  For large Device
+$image-space: var(--image-space);
+$image-space-extra: var(--image-space-extra);
+
+// Image Space On small Device
+$image-space-mobile: var(--image-space-mobile);
+$image-space-mobile-extra: var(--image-space-mobile-extra);
+
+//Grid gap
+$grid-gap: var(--grid-gap);
+
+// z-index variables (If needed)
+$z-index-modal: 1050;
+$z-index-dropdown: 1000;
+
+// Opacity (If you use this value often)
+$base-opacity: 0.8;
+
+// Transition Defaults (Optional)
+$default-transition-duration: 0.3s;
+$default-transition-timing-function: ease-in-out;
+$default-transition-delay: 0.1s;
+
+// Color Map (with descriptive comments)
+$theme-colors-map: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "title": $title,
+  "body": $body,
+  "text": $text,
+  "link": $link,
+  "warning": $warning,
+  "success": $success,
+  "error": $error,
+  "border": $border,
+);
+
+$themes: (
+  "default": $theme-colors-map,
+  "blue": (
+    "primary": #3e66f3,
+    "secondary": #3e66f3,
+    "title": #141d38,
+    "body": #737887,
+    "text": #000,
+    "link": #2b4569,
+    "warning": #ffb539,
+    "success": #28a745,
+    "error": #dc3545,
+    "border": #e0e0e0,
+  ),
+);
+
+// BG Color Mapping
+$bgcolorMap: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "title": $title,
+  "body": $body,
+  "warning": $warning,
+  "success": $success,
+  "error": $error,
+  "black": $black,
+  "gray-darker": $gray-darker,
+  "gray": $gray,
+  "gray-light": $gray-light,
+  "gray-lighter": $gray-lighter,
+  "gray-lightest": $gray-lightest,
+  "white": $white,
+);
+
+// Overlay Color Mapping
+$overlaycolorMap: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "title": $title,
+  "white": $white,
+  "black": $black,
+  "overlay": $overlay,
+);
+
+// Text Color Mapping
+$textColorsMap: (
+  "title": $title,
+  "text": $text,
+  "link": $link,
+  "warning": $warning,
+  "success": $success,
+  "error": $error,
+  "white": $white,
+);
+
+// Font Map
+$fontMap: (
+  "icon": $icon-font,
+  "title": $title-font,
+  "body": $body-font,
+  // Add more font families if needed
+);
+
+// Font Weights (If you need more control)
+$fontWeightsMap: (
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "extra-bold": 800,
+);
+
+@debug "Variable file loaded!";

@@ -1,0 +1,19 @@
+.th-masonry-col-2 .th-masonry-grid{
+    grid-template-columns: repeat(13, 1fr);
+    column-gap: 108px;
+    @include respond-to(xxl){
+      column-gap: 80px;
+    }
+    @include respond-to(xl){
+      column-gap: 54px;
+    }
+    @include respond-to(md){
+      column-gap: 0;
+    }
+    .product-item-img{
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }

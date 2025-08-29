@@ -1,0 +1,43 @@
+.th-circle-items {
+  padding: 17px 0;
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+  }
+}
+.th-blockquote-txt {
+  p {
+    font-size: var($body-font-size);
+    font-weight: var($body-font-size);
+    color: #808080;
+  }
+}
+.th-pinboard-item-edit {
+  margin-bottom: 17px;
+  .th-pinboard-item-blockquote {
+    padding: 14px;
+  }
+}
+.th-pinboard-item-info {
+  @include respond-to(mds) {
+    padding-top: 30px;
+  }
+}
+.th-pinbord-item-comment {
+  margin-top: 22px;
+}
+.th-pinboard-item{
+  position: relative;
+  .btn-close {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    border: none;
+    color: #929292;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: inherit;
+  }
+}

@@ -1,0 +1,41 @@
+.th-masonry-img{
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        .th-masonry-img-content{
+            opacity: 1;
+            visibility: visible;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    .th-masonry-img-content{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        opacity: 0;
+        visibility: hidden;
+        height: 100%;
+        padding:20px 40px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        h6{
+            margin-bottom: 0;
+            color: $white;
+        }
+        .th-btn-download-white{
+            background-color: $white;
+            color: $black;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    }
+}

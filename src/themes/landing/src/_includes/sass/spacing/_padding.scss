@@ -1,0 +1,107 @@
+@for $i from 1 through $space-count {
+  .p-#{5 * $i} {
+    padding: 5px *$i;
+  }
+}
+/*-- Padding Left And Right --*/
+@for $i from 1 through $space-count {
+  .px-#{5 * $i} {
+    padding-right: 5px *$i;
+    padding-left: 5px *$i;
+  }
+}
+
+/*-- Padding Top And Bottom --*/
+@for $i from 1 through $space-count {
+  .py-#{5 * $i} {
+    padding-top: 5px *$i;
+    padding-bottom: 5px *$i;
+  }
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through $space-count {
+  .pt-#{5 * $i} {
+    padding-top: 5px *$i;
+  }
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through $space-count {
+  .pb-#{5 * $i} {
+    padding-bottom: 5px *$i;
+  }
+  @include respond-to(sm){
+    .pb-sm-#{5 * $i} {
+      padding-bottom: 5px *$i;
+    }
+  }
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through $space-count {
+  .pl-#{5 * $i} {
+    padding-left: 5px *$i;
+  }
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through $space-count {
+  .pr-#{5 * $i} {
+    padding-right: 5px *$i;
+  }
+}
+
+
+.pl-0{
+  padding-left: 0!important;
+}
+.pl-md-0{
+  @include respond-to(md){
+    padding-left: 0;
+  }
+}
+.pl-lg-0{
+  @include respond-to(lg){
+    padding-left: 0;
+  }
+}
+
+.pb-mds-50{
+  @include respond-to(mds){
+    padding-bottom: 50px;
+  }
+}
+.pb-60 {
+  padding-bottom: 60px;
+}
+.pb-70 {
+  padding-bottom: 70px;
+}
+.pb-110{
+  padding-bottom: 110px;
+}
+.pl-70 {
+  padding-left: 70px;
+}
+.pr-100{
+  padding-right: 100px;
+}
+.pr-md-40{
+  padding-right: 40px;
+  @include respond-to(md){
+    padding-right: 0;
+  }
+}
+.fs-20 {
+  font-size: 20px; 
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pt-100 {
+  padding-top: 100px;
+}

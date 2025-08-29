@@ -1,0 +1,144 @@
+.swiper{
+    padding-bottom: 80px;
+}
+/* Ensure scrollbar is visible and styled properly */
+.swiper-scrollbar {
+    height: 6px; /* Thin track */
+    background: gray; /* Track color */
+}
+
+/* Make scrollbar thumb (button) thicker */
+.swiper-scrollbar-drag {
+    height: 10px; /* Thicker thumb */
+    background: black; /* Thumb color */
+    border-radius: 5px; /* Smooth rounded edges */
+    top: -3px;
+}
+.swiper-wrapper.row {
+    flex-wrap: nowrap;
+}
+.slider-content{
+    position: absolute;
+    padding: 75px;
+    bottom: 0;
+    min-width: 100%;
+    z-index: 1!important;
+    border-radius: 2px;
+   @include respond-to(md){
+       padding: 40px;
+   }
+   @include respond-to(sm){
+       padding: 20px;
+       .th-btn-outline{
+           padding: 10px;
+           font-size: 14px;
+           min-width: 130px;
+       }
+       .title{
+           font-size: 15px;
+       }
+       .sub-title{
+           font-size: 13px;
+           margin-bottom: 10px;
+       }
+   }
+}
+@include respond-to(sm){
+    .swiper-button-prev, .swiper-button-next{
+        display: none!important;
+    }
+}
+.th-slider {
+    &.has-shadow {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: -25px -12px;
+
+        .swiper-wrapper {
+            padding: 25px 0;
+        }
+    }
+}
+
+.swiper-fade {
+    .swiper-slide {
+        transition: 0.6s $default-transition-timing-function;
+    }
+
+    .swiper-slide-prev {
+        opacity: 0;
+    }
+}
+
+.swiper-pagination-bullets {
+    //position: relative;
+    z-index: 3;
+    margin: 50px 0 10px 0;
+    line-height: 12px;
+    height: 12px;
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        --swiper-pagination-bullet-size: 12px;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+        box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.6);
+        margin: 5px 7px;
+        opacity: 1;
+        background-color: $border;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 1px solid $primary;
+            background: $primary;
+            transform: scale(0);
+            border-radius: inherit;
+            transition: $default-transition-duration $default-transition-timing-function;
+        }
+
+        &.swiper-pagination-bullet-active {
+            &:before {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.slider-arrow {
+    background-color: $white;
+    border: 1px solid $border;
+    color: $primary;
+    position: absolute;
+    top: 50%;
+    left: var(--pos-x, -120px);
+    width: var(--icon-size, 55px);
+    height: var(--icon-size, 55px);
+    line-height: var(--icon-size, 55px);
+    font-size: var(--icon-font-size, 18px);
+    margin-top: calc(var(--icon-size, 55px) / -2);
+    z-index: 3;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+    }
+}
+
+@include xxl {
+    .slider-arrow {
+        --pos-x: -70px;
+    }
+}
+
+@include md {
+    .slider-arrow {
+        --icon-size: 40px;
+        font-size: 14px;
+    }
+}

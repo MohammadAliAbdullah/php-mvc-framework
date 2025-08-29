@@ -1,0 +1,17 @@
+.th-design-item {
+    &.th-card-gap {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    .th-tab-card-wrapper {
+        .th-res-img-wraper {
+            border: 1px solid $border-color;
+        }
+        .th-info-list {
+            color: var(--card-list-color);
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

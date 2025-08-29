@@ -1,0 +1,121 @@
+.th-products-list-wrapper {
+  row-gap: 100px;
+}
+.gr-bg8{
+  .th-item-product,
+  .th-item-project{
+    .th-img-container{
+      border:none;
+    }
+  }
+}
+.th-item-product,
+.th-item-project {
+  position: relative;
+  .th-img-container {
+    // min-height: 452px; //breaking Project list design
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid $gray;
+    @include respond-to(sm) {
+      min-height: 225px;
+    }
+  }
+  .th-item-footer {
+    .th-tag-name {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      .th-tag {
+        background-color: #eaeaec;
+        color: #5a5a5a;
+        padding: 4px 8px;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      &.white {
+        .th-tag {
+          background-color: $white;
+        }
+      }
+    }
+
+    .th-item-finish-circle {
+      display: flex;
+      gap: 10px;
+      padding-top: 10px;
+      .th-circle {
+        flex: 1;
+        aspect-ratio: 1;
+        max-width: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 10px;
+        // font-weight: 400;
+        text-align: center;
+        padding: 6px;
+        line-height: 1.1;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+      /* First two circles */
+      .black-fabric,
+      .black-premium {
+        background-color: #231f20;
+        color: #ffffff;
+      }
+
+      /* Third circle */
+      .mocha-premium {
+        background-color: #8c5534;
+        color: #ffffff;
+      }
+
+      /* Fourth circle */
+      .cream-premium {
+        background-color: #c2c1bd;
+        color: #33322f;
+      }
+    }
+  }
+}
+.th-item-project {
+  .th-img-container {
+    border: none;
+  }
+}
+
+/* Responsive for 480px */
+@include respond-to(sm) {
+  .th-products-list-wrapper {
+    row-gap: 50px;
+  }
+  .th-item-product,
+  .th-item-project {
+    .th-tag-name span {
+      padding: 3px;
+    }
+    .th-circle {
+      font-size: 0; /* Hide text */
+      text-indent: -9999px; /* Moves text out of view */
+    }
+
+    .th-item-footer .th-tag-name:nth-child(n + 3) {
+      display: none;
+    }
+
+    .th-add-to-pinboard {
+      right: 20px !important;
+    }
+    .th-description {
+      font-size: 14px;
+      line-height: 1.6em;
+    }
+    .th-item-finish-circle {
+      padding-top: 0!important;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#th-block-quote{
+    border-bottom: 1px solid $border-color;
+}
+.th-block-quote {
+    text-align: center;
+    font-style: italic;
+    max-width: 860px;
+    margin: 30px auto;
+    position: relative;
+    p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+    img {
+        width: 170px;
+    }
+    .th-quote-author {
+        display: block;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 40px;
+        color: #000;
+    }
+    &::before {
+        left: 0;
+        top: 0;
+    }
+    &::before, &::after {
+        content: '“';
+        font-size: 120px;
+        font-weight: bold;
+        line-height: 40px;
+        color: #ccc;
+        position: absolute;
+    }
+    &::after {
+        content: '”';
+        right: 130px;
+        bottom: 30px;
+    }
+}

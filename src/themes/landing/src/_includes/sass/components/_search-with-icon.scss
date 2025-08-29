@@ -1,0 +1,25 @@
+/* Custom Search Box */
+.custom-search-box {
+  padding-right: 40px;
+  font-size: 16px;
+  background-color: $white;
+  margin-bottom: 152px;
+}
+
+.search-icon i {
+  font-size: 18px;
+  color: $gray;
+}
+
+.close-icon i {
+  font-size: 18px;
+  color: $gray;
+}
+
+.close-icon {
+  right: 20px;
+}
+
+.search-icon {
+  right: 20px; /* Search icon positioned before the close icon */
+}

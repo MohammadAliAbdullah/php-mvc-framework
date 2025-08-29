@@ -1,0 +1,12 @@
+.th-breadcrumb{
+    position: relative;
+    z-index: 1;
+}
+.breadcrumb-item {
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumb-item.font-white {
+        &::before{
+            color: $white !important;
+        }
+    }
+}

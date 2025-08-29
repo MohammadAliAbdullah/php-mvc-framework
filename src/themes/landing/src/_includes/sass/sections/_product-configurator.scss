@@ -1,0 +1,255 @@
+//Start  Css for Product Configurator
+/* Product Configurator Accordion Styles */
+.th-product-model .model-column {
+    padding: 20px 0;
+}
+
+/* Accordion Styles */
+.th-product-accordion {
+    margin-bottom: 15px;
+}
+
+.th-accordion-item {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $primary;
+    margin-bottom: 0;
+}
+
+.th-accordion-item:last-child {
+    border-radius: 0;
+}
+
+.th-accordion-button {
+    background: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-button.th-accordion-button::after {
+    display: none;
+}
+
+.th-config-label {
+    font-size: 1.25rem;
+    font-weight: 400;
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+.th-config-value {
+    color: #999;
+    font-weight: 400;
+}
+
+.th-config-icon {
+    font-size: 25px;
+    min-width: 25px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+/* Color Selection Styles */
+.th-colors-selection {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.th-color-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.th-color-swatch {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.th-color-option.active .th-color-swatch {
+    outline: 2px solid orange;
+}
+
+.th-color-name {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.th-color-swatch.th-red-lava {
+    background-color: #8B4513;
+}
+
+.th-color-swatch.th-black {
+    background-color: #222;
+}
+
+/* Config Options */
+.th-config-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.th-config-options li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 0;
+}
+
+/* Order Online Section */
+.th-config-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.th-section-header-link-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.th-file-formats {
+    margin-top: 20px;
+}
+
+.th-file-formats p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.th-file-formats span {
+    font-size: 0.9rem;
+    color: #666;
+}
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+
+
+
+//======================End Product Configurator Css======================
+
+
+
+
+.threed-section {
+    background-color: #ffffff;
+    border: 1px solid $gray;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 695px; // Adjust width as needed
+    position: relative; /* Add this to make it a positioning context */
+
+    .scan-instruction {
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        font-size: 12px;
+        color: #231F20;
+        padding: 5px 10px;
+    }
+
+    
+    
+    .qr-code {
+        background-color: #ffffff;
+        padding: 15px;
+        display: inline-block;
+        margin-bottom: 15px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers everything inside horizontally */
+        text-align: center;
+
+        img {
+            width: 382px; // Adjust size of QR code
+        }
+        /* Container for 3D text to ensure it sits below the QR code */
+        .threed-container img {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Space between QR code and 3D symbol */
+
+            width: 50px;
+            height: 50px;
+            
+        }
+        @include respond-to(sm) {
+            padding-bottom: 60px;
+        }
+    }
+
+    .thumbnail-selection {
+        display: flex;
+        justify-content: flex-start; /* Align thumbnails to the left */
+        gap: 10px; // Space between thumbnails
+        position: absolute; /* Position absolutely within threed-section */
+        bottom: 20px; /* Distance from the bottom */
+        left: 20px; /* Distance from the left */
+        z-index: 1; /* Ensure it's above other content */
+
+        .thumbnail {
+            width: 60px; // Thumbnail size
+            height: 60px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.selected {
+                border-color: #333; // Highlight selected thumbnail
+            }
+
+            &:hover {
+                border-color: #666; // Hover effect
+            }
+        }
+    }
+
+    .img-container {
+        position: absolute;
+        top:30px;
+        left: 34px;
+    }
+}
+.model-column .file-formats {
+    margin-top: 32px;
+    text-align: left;
+}
+.model-column .file-formats p {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.model-column .file-formats p span {
+    text-decoration: underline;
+}
+.th-product-order-online {
+    margin-top: 80px;
+}

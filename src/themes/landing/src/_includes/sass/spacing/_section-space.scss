@@ -1,0 +1,22 @@
+section {
+  padding: $space 0;
+  &.hero-section {
+    padding: 30px $space $space $space;
+  }
+}
+.th-section-header {
+  padding-bottom: var(--section-title-space);
+}
+
+@include respond-to(xs) {
+  section {
+    padding: $space-mobile 0;
+  }
+  .th-section-header {
+    padding-bottom: var(--section-title-mobile-space);
+  }
+}
+
+.row-gap-50{
+  row-gap: 50px;
+}

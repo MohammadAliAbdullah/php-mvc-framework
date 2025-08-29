@@ -1,0 +1,218 @@
+#our-principle {
+  .th-item-details {
+    text-align: center;
+    margin: 0 25px;
+    .th-item-title {
+      margin-bottom: 15px;
+    }
+  }
+
+  .img-container {
+    margin-bottom: 30px;
+
+    &.principle-icon {
+      padding: 0 26%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .th-img-circle {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.th-video-player-logo {
+  padding: 20px;
+}
+
+// Contact Us Page Design
+
+// Design process
+#design-process {
+  background-color: $gray;
+
+  .section-header {
+    padding-bottom: 117px;
+  }
+
+  .th-content-sub-item {
+    padding-left: 153px;
+  }
+  .th-sub-item {
+    margin-top: 43px;
+    width: 100%;
+    max-width: 495px;
+
+    .th-sub-heading {
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .th-sub-heading-details {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 157%;
+    }
+  }
+}
+
+.step-number {
+  font-size: 182px;
+  font-weight: 400;
+  line-height: 78%;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#design-process .th-sub-item {
+  position: relative;
+  margin-bottom: 60px; /* Space below the content */
+}
+
+#design-process .th-sub-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 60px); /* Places the line 60px below */
+  width: 2px;
+  height: 77px; /* Adjust line height */
+  background-color: #231f20;
+}
+#design-process .th-sub-item.no-border {
+  &::after {
+    display: none;
+  }
+}
+
+//@media (max-width: 767px) {
+//    #design-process {
+//        .th-mb {
+//            margin-bottom: 20px;
+//        }
+//        .col-md-6 {
+//            margin-top: 10px;
+//        }
+//    }
+//}
+
+// Contact To Design
+#contact-to {
+  background-color: $gray;
+
+  .th-after-vertical-line {
+    position: relative;
+    display: inline;
+  }
+  .th-after-vertical-line::after {
+    content: "";
+    width: 2px;
+    height: 90%;
+    display: block;
+    background-color: #231f20;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+
+  .th-left-address,
+  .th-right-address {
+    padding-left: 96px;
+  }
+
+  .th-right-address {
+    p {
+      font-size: 22px;
+      line-height: 157%;
+    }
+    .th-email {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .section-header-link {
+      justify-content: left;
+      .section-header-link-text {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  h2 {
+    line-height: 72px;
+    margin-bottom: 5px;
+  }
+
+  .th-col-1 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #1e1e1e;
+    line-height: 100%;
+    padding-top: 4px;
+  }
+
+  .th-col-2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 157%;
+    letter-spacing: -2%;
+  }
+  // @media (max-width: 991px) {
+  //     .th-after-vertical-line {
+  //         display: none; /* Hide the vertical line */
+  //     }
+  // }
+}
+
+// Contact Us Hero Page
+
+.contact-us-hero {
+  .th-book-tour {
+    background-color: transparent;
+    border: 1px solid #231f20;
+  }
+  .th-book-tour:hover {
+    background-color: white;
+    border: 1px solid #231f20;
+  }
+}
+
+@include respond-to(xl) {
+  #design-process .th-content-sub-item {
+    padding-left: 100px;
+  }
+}
+@include respond-to(ml) {
+  #design-process .th-content-sub-item {
+    padding-left: 50px;
+  }
+}
+@include respond-to(md) {
+  #design-process .th-content-sub-item {
+    padding-left: 25px;
+  }
+}
+@include respond-to(mds) {
+  #design-process .th-content-sub-item {
+    padding-left: 15px;
+  }
+  #design-process .th-sub-item {
+    &::after {
+      display: none;
+    }
+  }
+  .pb-110 {
+    padding-bottom: 50px !important;
+  }
+}
+@include respond-to(sm) {
+  #design-process .th-content-sub-item {
+    padding-left: 0;
+  }
+}

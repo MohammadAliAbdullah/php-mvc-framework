@@ -1,0 +1,121 @@
+.bg-gray {
+    background: #EAEAEC !important;
+}
+.th-product-detail-tabs {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto; // Center the tab
+    @include respond-to(sm){
+        padding: 0;
+    }
+    //Accordion
+    .accordion-button{
+        font-size: 20px!important;
+        color: $primary!important;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: $white!important;
+        color: $primary!important;
+    }
+    .accordion-item{
+        color: $primary!important;
+        h3{
+            color: $primary!important;
+            padding: 20px 0 15px 0;
+            font-size: 24px!important;
+        }
+        li{
+            padding-left: 15px;
+            text-indent: -12px; // Creates a hanging indent effect for the bullet points
+        }
+    }
+    
+
+    .nav {
+        display: flex;
+        justify-content: flex-start; /* Ensures left alignment */
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 80px!important;
+        border-bottom: 2px solid #ddd!important;
+
+        .nav-link {
+            flex: 1;
+            text-align: left; 
+            padding: 10px 0;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            font-weight: 400;
+            cursor: pointer;
+            color: #222222;
+            position: relative;
+            transition: color 0.3s ease;
+            white-space: nowrap; // Prevent text from wrapping
+
+            &.active {
+                color: #333;
+                font-weight: bold;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px; // Align with the border-bottom of .tab-list
+                    width: 100%;
+                    height: 2px; // Underline thickness
+                    background-color: #333;
+                }
+            }
+
+            &:hover {
+                color: #333;
+            }
+
+            // Adjust font size for smaller screens
+
+            @include respond-to(lg) {
+                font-size: 20px;
+            }
+            @include respond-to(md) {
+                font-size: 18px;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+            @include respond-to(sm) {
+                font-size: 16px;
+            }
+            
+        }
+        .nav-link:last-child {
+            flex: 2;
+        }
+    }
+
+    .tab-content {
+        .tab-pane {
+            &.active {
+                display: flex;
+                align-items: center;
+                gap: 20px; 
+                // Stack columns vertically on smaller screens
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start; // Reset alignment for mobile
+                }
+            }
+            li{
+                font-size: 18px;
+                line-height: 1.9em;
+                padding-left: 15px;
+                text-indent: -12px;
+            }
+            img{
+                padding: 0 20px 20px 20px;
+            }
+            .row{
+                row-gap: 40px;
+            }
+        }
+    }
+}

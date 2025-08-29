@@ -1,0 +1,188 @@
+.th-our-sector-curosel-menu {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+    padding-bottom: 40px;
+    text-align: left;
+  
+    ul {
+      margin: 0;
+      padding: 0 0;
+  
+      li {
+        //border-bottom: 1px solid #fdedf1;
+        list-style-type: none;
+  
+        li:first-child {
+          //border-top: 1px solid #fdedf1;
+        }
+        .sub-title{
+          font-weight: 500!important;
+        }
+        &.th-active{
+          .sub-title{
+            font-weight: 700!important;
+            span{
+              padding-bottom: 3px;
+              border-bottom: 2px solid;
+            }
+          }
+        }
+  
+        a {
+          display: block;
+          position: relative;
+          padding: 12px 0;
+          line-height: 1.4;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: $title;
+  
+        }
+        .link{
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+  
+        &.th-active {
+          >a {
+            color: $primary;
+  
+            &:before {
+              transform: rotate(90deg);
+            }
+          }
+        }
+  
+        ul {
+          li {
+  
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+  
+      .th-item-has-children {
+        >a {
+          .th-mean-expand {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            font-weight: 400;
+            font-size: 12px;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            margin-top: -12.5px;
+            display: inline-block;
+            text-align: center;
+            background-color: $gray;
+            color: $title;
+            box-shadow: 0 0 20px -8px rgba(#ad8858, 0.5);
+            border-radius: 50%;
+            padding-left: 1px;
+  
+            &:before {
+              content: '\f067';
+              font-family: $icon-font;
+            }
+          }
+        }
+  
+        &.th-active {
+          >a {
+            .th-mean-expand:before {
+              content: '\f068';
+            }
+          }
+        }
+      }
+    }
+  
+    >ul {
+  
+  
+      >li {
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  #our-sector-curosel{
+    h4{
+      margin: 0!important;
+    }
+    h5{
+      margin: 0;
+    }
+    background-color: $gray;
+    .our-sector-curosel-slider {
+    
+      perspective: 1000px; // Enhances the 3D depth effect
+  
+      &.slider-container {
+        width: 97%;
+        position: relative;
+        //transform: rotateX(8deg); // Default 3D tilt
+        box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3); // Stronger bottom-right shadow
+        background: transparent;
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        cursor: pointer; // Makes it clear it's interactive
+        @include respond-to(md){
+          width: 98%;
+        }
+  
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 55%; // Shift slightly right for a more bottom-right shadow effect
+          width: 95%;
+          height: 20px;
+          background: radial-gradient(
+                          ellipse at center,
+                          rgba(0, 0, 0, 0.25) 0%,  // Darker center
+                          rgba(0, 0, 0, 0.15) 40%,
+                          rgba(0, 0, 0, 0.05) 70%,
+                          transparent 100%
+          ); // Smooth fade-out for a natural look
+          filter: blur(16px); // Adds a diffused, soft transition
+          transform: translateX(-50%) scaleY(1.2); // Slightly elongated for a realistic depth effect
+          transform-origin: top;
+          opacity: 1; // Always visible
+          transition: filter 0.4s ease-in-out, background 0.4s ease-in-out;
+        }
+  
+        &:hover {
+          box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.4); // Darker and slightly deeper shadow
+  
+          &::after {
+            background: radial-gradient(
+                            ellipse at center,
+                            rgba(0, 0, 0, 0.35) 0%,  // Even darker center on hover
+                            rgba(0, 0, 0, 0.2) 40%,
+                            rgba(0, 0, 0, 0.1) 70%,
+                            transparent 100%
+            ); // Stronger shadow effect
+            filter: blur(18px); // Slightly sharper shadow blur
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  .th-category-slide{
+    padding: 40px;
+  }
+  
+  
+  @include respond-to(xs){
+    .th-our-sector-curosel-menu{
+  
+    }
+  }
+  

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+  <title>PHP Fullstack Developer - Mohammed Ali Abdullah</title>
+
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css">
+
+</head>
+
+<body class="text-center" style="height: auto;">
+  <div class="d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Cover</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link" href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app">
+      <div>
+        <h1 data-v-title class="cover-heading">Title Goes Here</h1>
+        <h3 data-v-description>Description Goes Here</h3>
+        <p data-v-intro class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+
+        <ul id="instructions" class="text-left">
+          <li data-v-instruction>1. Instructions</li>
+        </ul>
+      </div>
+      <p class="lead">
+        <a data-v-action href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      </p>
+    </main>
+
+    <section id="guide" class="text-left " style="color: #000 !important; text-shadow: none;">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mb-4" style="color: #fff">🚀 PHP MVC Framework</h2>
+
+            <!-- Overview -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>📋 Overview</h3>
+              </div>
+              <div class="card-body">
+                <p>This guide explains how to create new routes in your PHP MVC framework, following the established pattern used in your codebase.</p>
+              </div>
+            </div>
+
+            <!-- File Structure Example -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>📁 Complete File Structure Example</h3>
+              </div>
+              <div class="card-body">
+                <pre><code>src/
+├── Core/
+│   ├── Controllers/
+│   │   └── HomeController.php          ← Step 1: Controller Logic
+│   └── templates/
+│       └── home/
+│           └── index.tpl               ← Step 2: Template Processing
+├── Models/
+│   └── User.php
+└── Repositories/
+    └── UserRepository.php
+
+themes/
+└── landing/
+    ├── src/                            ← Step 3: Source Files (Development)
+    │   ├── home/
+    │   │   ├── index.html              ← HTML Structure
+    │   │   ├── index.scss              ← SASS Styles
+    │   │   └── _variables.scss         ← SASS Variables
+    │   ├── scss/                       ← Global SASS
+    │   │   ├── main.scss               ← Main SASS Entry
+    │   │   ├── _variables.scss         ← Global Variables
+    │   │   ├── _mixins.scss            ← SASS Mixins
+    │   │   └── _utilities.scss         ← Utility Classes
+    │   ├── js/                         ← JavaScript Files
+    │   │   └── main.js
+    │   └── assets/                     ← Images, Fonts, etc.
+    │       ├── images/
+    │       └── fonts/
+    ├── home/                           ← Generated Output (Production)
+    │   └── index.html                  ← Compiled HTML
+    ├── css/                            ← Compiled CSS
+    │   ├── main.css                    ← Compiled from SASS
+    │   └── main.min.css                ← Minified CSS
+    ├── js/                             ← Compiled JavaScript
+    │   ├── main.js
+    │   └── main.min.js                 ← Minified JS
+    ├── gulpfile.js                     ← Build Automation
+    ├── package.json                    ← Node Dependencies
+    └── node_modules/                   ← Installed Packages</code></pre>
+              </div>
+            </div>
+
+            <!-- Gulp Workflow Explanation -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🔧 Gulp Workflow & SASS Integration</h3>
+              </div>
+              <div class="card-body">
+                
+                <h4><strong>Development Workflow (src/ folder)</strong></h4>
+                <ul>
+                  <li><strong><code>index.html</code></strong> - Your HTML structure with design elements</li>
+                  <li><strong><code>index.scss</code></strong> - Component-specific SASS styles</li>
+                  <li><strong><code>_variables.scss</code></strong> - Local SASS variables (colors, fonts, spacing)</li>
+                  <li><strong><code>_mixins.scss</code></strong> - Reusable SASS patterns</li>
+                </ul>
+
+                <h4><strong>Build Process (gulpfile.js)</strong></h4>
+                <pre><code class="language-javascript">// Example gulpfile.js structure
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+
+// SASS compilation
+gulp.task('sass', () => {
+  return gulp.src('src/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('css/'));
+});
+
+// Watch for changes
+gulp.task('watch', () => {
+  gulp.watch('src/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/**/*.html', gulp.series('html'));
+});</code></pre>
+
+                <h4><strong>SASS to CSS Transformation</strong></h4>
+                <pre><code>SCSS Input (src/)          →    CSS Output (css/)
+├── index.scss                    ├── main.css
+├── _variables.scss               └── main.min.css
+├── _mixins.scss
+└── _utilities.scss</code></pre>
+
+                <h4><strong>How Gulp Helps with HTML Design</strong></h4>
+                
+                <h5><strong>1. Live Reload & Development</strong></h5>
+                <ul>
+                  <li><strong>Watch files</strong> for changes in real-time</li>
+                  <li><strong>Auto-compile</strong> SASS to CSS instantly</li>
+                  <li><strong>Browser refresh</strong> when files change</li>
+                  <li><strong>Hot reload</strong> for faster development</li>
+                </ul>
+
+                <h5><strong>2. SASS Compilation Benefits</strong></h5>
+                <ul>
+                  <li><strong>Variables</strong>: <code>$primary-color: #007bff;</code></li>
+                  <li><strong>Nesting</strong>: Clean, organized CSS structure</li>
+                  <li><strong>Mixins</strong>: Reusable design patterns</li>
+                  <li><strong>Functions</strong>: Dynamic color calculations</li>
+                  <li><strong>Partials</strong>: Modular SASS organization</li>
+                </ul>
+
+                <h5><strong>3. Production Optimization</strong></h5>
+                <ul>
+                  <li><strong>CSS minification</strong> for smaller file sizes</li>
+                  <li><strong>Autoprefixer</strong> for cross-browser compatibility</li>
+                  <li><strong>Source maps</strong> for debugging</li>
+                  <li><strong>Asset optimization</strong> (images, fonts)</li>
+                </ul>
+
+                <h5><strong>4. Workflow Integration</strong></h5>
+                <pre><code>Developer writes SASS → Gulp watches → Auto-compile → Browser updates
+     ↓                    ↓            ↓            ↓
+  index.scss         gulp watch    CSS output   Live preview</code></pre>
+
+                <h4><strong>Development Commands</strong></h4>
+                <pre><code class="language-bash"># Install dependencies
+npm install
+
+# Development mode (watch files)
+gulp watch
+
+# Build for production
+gulp build
+
+# Clean generated files
+gulp clean</code></pre>
+
+                <h4><strong>Benefits for HTML Design</strong></h4>
+                <ol>
+                  <li><strong>Faster Development</strong> - Live reload and auto-compilation</li>
+                  <li><strong>Better Organization</strong> - Modular SASS structure</li>
+                  <li><strong>Professional Workflow</strong> - Industry-standard build tools</li>
+                  <li><strong>Cross-browser Support</strong> - Automatic vendor prefixes</li>
+                  <li><strong>Performance</strong> - Minified and optimized output</li>
+                  <li><strong>Maintainability</strong> - Clean, organized code structure</li>
+                </ol>
+
+                <div class="alert alert-info">
+                  <strong>💡 Pro Tip:</strong> This workflow allows developers to write modern SASS code while Gulp automatically handles the compilation, optimization, and browser compatibility!
+                </div>
+              </div>
+            </div>
+
+            <!-- Complete Route Creation Process -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🎯 Complete Route Creation Process</h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong>Step 1: Create Controller Action</strong>
+                </h4>
+                <p>Create or modify a controller in <code>src/Core/Controllers/</code> directory.</p>
+
+                <h5>Example: <code>HomeController.php</code>
+                </h5>
+                <pre><code class="language-php">&lt;?php
+namespace App\Core\Controllers;
+
+use App\Core\Http\Controller;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        // Data passed here will be available in template as $this->parameters
+        $this->parameters = [
+            'title' => 'Welcome to My App',
+            'description' => 'A beautiful landing page',
+            'posts' => [
+                ['title' => 'First Post', 'content' => 'Content here'],
+                ['title' => 'Second Post', 'content' => 'More content']
+            ]
+        ];
+        
+        // Return view name (corresponds to template file)
+        return 'home/index';
+    }
+    
+    public function about()
+    {
+        $this->parameters = [
+            'title' => 'About Us',
+            'team' => ['John', 'Jane', 'Bob']
+        ];
+        
+        return 'home/about';
+    }
+}</code></pre>
+
+                <h4>
+                  <strong>Step 2: Create Template File (.tpl)</strong>
+                </h4>
+                <p>Create a <code>.tpl</code> file in <code>src/Core/templates/{controller}/{action}.tpl</code>
+                </p>
+
+                <h5>Example: <code>src/Core/templates/home/index.tpl</code>
+                </h5>
+                <pre><code class="language-php">
+                  #app | prepend = &lt;?php $data = $this-&gt;parameters;?&gt;
+              
+              h1[data-v-title] | innerText = &lt;?php echo $data['title']; ?&gt;
+              h3[data-v-description] | innerText = &lt;?php echo $data['description']; ?&gt;
+              p[data-v-intro] | innerText = &lt;?php echo $data['intro']; ?&gt;
+              
+              #instructions | prepend = &lt;?php foreach($data['instructions'] as $instruction) { ?&gt;
+                  li[data-v-instruction] | innerHTML = &lt;?php echo $instruction; ?&gt;
+              #instructions | append = &lt;?php }?&gt;
+              
+              a[data-v-action] | innerText = &lt;?php echo $data['button_text']; ?&gt;</code></pre>
+
+                <h4>
+                  <strong>Step 3: Create HTML Source File</strong>
+                </h4>
+                <p>Create the HTML file in <code>themes/landing/src/{controller}/{action}.html</code>
+                </p>
+
+                <h5>Example: <code>themes/landing/src/home/index.html</code>
+                </h5>
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Home Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;!-- This is where your .tpl content will be injected --&gt;
+        &lt;!-- The #app selector tells the system where to append content --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h4>
+                  <strong>Step 4: Auto-Generation Process</strong>
+                </h4>
+                <p>The system automatically:</p>
+                <ol>
+                  <li>
+                    <strong>Reads</strong> from <code>themes/landing/src/</code> folder
+                  </li>
+                  <li>
+                    <strong>Processes</strong> the <code>.tpl</code> template
+                  </li>
+                  <li>
+                    <strong>Generates</strong> final HTML in <code>themes/landing/{controller}/</code> folder
+                  </li>
+                  <li>
+                    <strong>Injects</strong> processed content into the HTML file
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <!-- Key Concepts -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🔧 Key Concepts</h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong>Template Syntax</strong>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>
+                      <code>#app | append =</code>
+                    </strong> - Tells the system to append content to <code>#app</code> element
+                  </li>
+                  <li>
+                    <strong>
+                      <code>$this->parameters</code>
+                    </strong> - Contains all data passed from controller
+                  </li>
+                  <li>
+                    <strong>Heredoc syntax</strong> - Use <code>&lt;&lt;&lt;HTML</code> for clean HTML writing
+                  </li>
+                  <li>
+                    <strong>Variable interpolation</strong> - Use <code>{$variable}</code> inside heredoc
+                  </li>
+                </ul>
+
+                <h4>
+                  <strong>Data Flow</strong>
+                </h4>
+                <pre><code>Controller → Template (.tpl) → HTML Source → Generated HTML
+    ↓              ↓              ↓              ↓
+Parameters → Process Data → Inject Content → Final Output</code></pre>
+              </div>
+            </div>
+
+            <!-- Available Tools -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🛠️ Available Tools</h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong>Models & Repositories</strong>
+                </h4>
+                <pre><code class="language-php">// In your controller
+use App\Core\Models\User;
+use App\Core\Repositories\UserRepository;
+
+public function users()
+{
+    $userRepo = new UserRepository();
+    $users = $userRepo->getAll();
+    
+    $this->parameters = [
+        'users' => $users
+    ];
+    
+    return 'user/list';
+}</code></pre>
+
+                <h4>
+                  <strong>Database Operations</strong>
+                </h4>
+                <pre><code class="language-php">// Using models
+$user = new User();
+$user->name = 'John Doe';
+$user->email = 'john@example.com';
+$user->save();
+
+// Using repositories
+$userRepo = new UserRepository();
+$user = $userRepo->findById(1);</code></pre>
+              </div>
+            </div>
+
+
+
+            <!-- Template Examples -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🎨 Template Examples</h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong>Simple Data Display</strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this->parameters;
+echo "&lt;h1&gt;{$data['title']}&lt;/h1&gt;";
+echo "&lt;p&gt;{$data['description']}&lt;/p&gt;";
+?&gt;</code></pre>
+
+                <h4>
+                  <strong>Loop Through Data</strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this->parameters;
+echo "&lt;ul&gt;";
+foreach ($data['users'] as $user) {
+    echo "&lt;li&gt;{$user['name']} - {$user['email']}&lt;/li&gt;";
+}
+echo "&lt;/ul&gt;";
+?&gt;</code></pre>
+
+                <h4>
+                  <strong>Conditional Rendering</strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this->parameters;
+if (!empty($data['posts'])) {
+    echo "&lt;div class='posts'&gt;";
+    foreach ($data['posts'] as $post) {
+        echo "&lt;article&gt;&lt;h2&gt;{$post['title']}&lt;/h2&gt;&lt;/article&gt;";
+    }
+    echo "&lt;/div&gt;";
+} else {
+    echo "&lt;p&gt;No posts available.&lt;/p&gt;";
+}
+?&gt;</code></pre>
+              </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>⚠️ Important Notes</h3>
+              </div>
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <strong>Always use <code>$this->parameters</code>
+                    </strong> to access controller data in templates
+                  </li>
+                  <li>
+                    <strong>Template files (.tpl)</strong> are processed by the Vtpl system
+                  </li>
+                  <li>
+                    <strong>HTML source files</strong> go in <code>themes/landing/src/</code> folder
+                  </li>
+                  <li>
+                    <strong>Generated files</strong> appear in <code>themes/landing/{controller}/</code> folder
+                  </li>
+                  <li>
+                    <strong>Use <code>#app</code> selector</strong> in HTML source for content injection
+                  </li>
+                  <li>
+                    <strong>Template syntax</strong> must be valid PHP code
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🔍 Troubleshooting</h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong>Common Issues</strong>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>Template not found</strong>: Check file path and naming convention
+                  </li>
+                  <li>
+                    <strong>Data not available</strong>: Ensure <code>$this->parameters</code> is set in controller
+                  </li>
+                  <li>
+                    <strong>HTML not generated</strong>: Verify HTML source file exists in correct location
+                  </li>
+                  <li>
+                    <strong>Syntax errors</strong>: Check PHP syntax in .tpl files
+                  </li>
+                </ul>
+
+                <h4>
+                  <strong>Debug Tips</strong>
+                </h4>
+                <pre><code class="language-php">// In your template, add debugging
+#app | append = &lt;?php
+var_dump($this->parameters);
+echo "&lt;pre&gt;" . print_r($this->parameters, true) . "&lt;/pre&gt;";
+?&gt;</code></pre>
+              </div>
+            </div>
+
+            <!-- Quick Reference -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>📚 Quick Reference</h3>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Step</th>
+                        <th>File Location</th>
+                        <th>Purpose</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <code>src/Core/Controllers/{Name}Controller.php</code>
+                        </td>
+                        <td>Define action and data</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <code>src/Core/templates/{controller}/{action}.tpl</code>
+                        </td>
+                        <td>Process data and generate HTML</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                          <code>themes/landing/src/{controller}/{action}.html</code>
+                        </td>
+                        <td>HTML structure and styling</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                          <code>themes/landing/{controller}/{action}.html</code>
+                        </td>
+                        <td>Auto-generated final output</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3>🎉 Conclusion</h3>
+              </div>
+              <div class="card-body">
+                <p>This pattern ensures clean separation of concerns and maintainable code structure! 🚀</p>
+                <p>
+                  <strong>Remember:</strong> The key is following the established pattern: Controller → Template → HTML Source → Generated Output.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

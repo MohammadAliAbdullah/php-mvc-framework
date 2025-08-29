@@ -1,0 +1,34 @@
+.th-item-img-content{
+    width: 100%;
+    .th-link{
+        width: 100%;
+        a{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+.th-rounded-circle{
+    border-radius: 50%;
+    height: 164px;
+    aspect-ratio: 1;
+    max-height: 164px;
+    object-fit: cover;
+    background-color: $gray;
+}
+@include respond-to(md){
+    .th-item-img-card{
+        margin-bottom: 50px;
+        .th-img-container{
+            width: 100%;
+            .th-rounded-circle{
+                height: auto;
+                max-height: auto;
+                width: 80%;
+            }
+        }
+    }
+}

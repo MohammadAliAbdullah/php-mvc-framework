@@ -1,0 +1,213 @@
+<!-- <section id="th-contact-members">
+    <div class="container th-container">
+        <div class="row">
+            @@include('./header-section.html',{ 
+                "sectionTitle":"Connect with our sales team",
+                "sectionSubtitle":"Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.",
+                "sectionClass":"text-center",
+            })
+
+            <div class="section-body th-members">
+                @@loop("./sales-team-item.html", "./data/sales-team-item.json")
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="th-contact-members">
+    <div class="container th-container">
+      <div class="row">
+        <div class="th-section-header" style="display: block">
+          <div class="th-section-header-wrapper text-center">
+            <h2 class="  th-section-title "> Connect with our sales team </h2>
+            <div class="th-section-subtitle" style="font-size: 16px;">
+              Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="section-body th-members">
+          <div class=" pb-70" data-v-component-salesteamsydneys>
+            <h3 class="title th-member-title" data-v-salesteamsydneys-section_title>Sydney</h3>
+            <div class="sydney-list d-flex row th-members-row">
+              <div class="col-sm-6 col-lg-3 sydney-item">
+                <div class="th-member" data-bg-src="/img/contact/member-0.jpg" data-v-salesteamsydneyitem-member_image>
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" data-v-salesteamsydneyitem-member_name>Devon Lane</p>
+                      <p class="th-member-position" data-v-salesteamsydneyitem-member_position>Director</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 sydney-item">
+                <div class="th-member" data-bg-src="/img/contact/member-1.jpg">
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" >Jane Doe</p>
+                      <p class="th-member-position">Senior Sales Executive</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 sydney-item">
+                <div class="th-member" data-bg-src="/img/contact/member-2.jpg">
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name">Devon Lane</p>
+                      <p class="th-member-position">Sales Executive</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 sydney-item">
+                <div class="th-member" data-bg-src="/img/contact/member-3.jpeg">
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name">Jane Doe</p>
+                      <p class="th-member-position">Sales Executive</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row th-members-row pb-70" data-v-component-salesteammelbourne>
+            <h3 class="title th-member-title" data-v-salesteammelbourne-section_title>Melbourne</h3>
+            <div class="melbourne-list row th-members-row">
+              <div class="col-sm-6 col-lg-3 melbourne-item">
+                <div class="th-member" data-bg-src="/img/contact/member-0.jpg" data-v-salesteammelbourneitem-member_image>
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" data-v-salesteammelbourneitem-member_name>Devon Lane</p>
+                      <p class="th-member-position" data-v-salesteammelbourneitem-member_position>Director</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 melbourne-item">
+                <div class="th-member" data-bg-src="/img/contact/member-5.jpg" >
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" >Jane Doe</p>
+                      <p class="th-member-position" >Project Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 melbourne-item">
+                <div class="th-member" data-bg-src="/img/contact/member-6.jpg" >
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" >Devon Lane</p>
+                      <p class="th-member-position">Sales Executive</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 melbourne-item">
+                <div class="th-member" data-bg-src="/img/contact/member-7.jpg" >
+                  <div class="th-member-icons">
+                    <span>
+                      <i class="fa-solid fa-calendar"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <div class="th-member-info-container gr-bg6">
+                    <div class="th-member-info">
+                      <p class="th-member-name" >Jane Doe</p>
+                      <p class="th-member-position" >Sales Executive</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

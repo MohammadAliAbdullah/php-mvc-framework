@@ -1,0 +1,219 @@
+@each $bgcolorMap,
+$value in $bgcolorMap {
+    .bg-#{$bgcolorMap} {
+        background-color: #{$value} !important;
+    }
+}
+
+.gradient-body {
+    background-image: linear-gradient(100.62deg, rgba(249, 215, 175, 0.3) 0%, rgba(214, 202, 245, 0.3) 24.03%, rgba(198, 241, 255, 0.3) 45.73%, rgba(248, 242, 222, 0.3) 69.05%, rgba(212, 179, 253, 0.3) 100.44%);
+}
+
+.gr-bg1 {
+    background-image: linear-gradient(
+                    180deg,
+                    rgba(234, 234, 236, 1) 30%,
+                    rgba(255, 250, 250, 1) 50%,
+                    rgba(255, 250, 250, 1) 100%
+    );
+}
+
+.gr-bg2 {
+    background-image: linear-gradient(
+                    180deg,
+                    rgba(255, 250, 250, 1) 50%,
+                    rgba(234, 234, 236, 1) 100%,
+    );
+}
+
+.gr-bg3 {
+    // background-image: linear-gradient(110.59deg, rgba(205, 219, 253, 0.4) 0%, rgba(229, 233, 255, 0.7) 100%);
+    background-image: linear-gradient(110.59deg, rgba(236, 207, 254, 0.4) 0%, rgba(255, 221, 221, 0.5) 46.79%, rgba(247, 255, 229, 0.7) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.gr-bg4 {
+    &:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-image: linear-gradient(
+                        120deg,
+                        rgba(0, 0, 0, 0.6) 0%,
+                        rgba(0, 0, 0, 0.5) 25%,
+                        rgba(0, 0, 0, 0.2) 50%,
+                        rgba(0, 0, 0, 0.05) 75%,
+                        rgba(0,0,0, 0) 100%
+        );
+
+    }
+}
+
+.gr-bg5 {
+    &:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: linear-gradient(
+                        15deg,
+                        rgba(0, 0, 0, 0.8) 15%,
+                        rgba(0, 0, 0, 0.7) 30%,
+                        rgba(0, 0, 0, 0.3) 40%,
+                        rgba(0, 0, 0, 0) 50%,
+                        rgba(0, 0, 0, 0) 100%
+        );
+
+    }
+}
+
+
+.gr-bg6 {
+    &:before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+                        55deg,
+                        rgba(0, 0, 0, 0.6) 10%,
+                        rgba(0, 0, 0, 0.5) 40%,
+                        rgba(0, 0, 0, 0) 60%,
+                        rgba(0, 0, 0, 0) 70%,
+                        rgba(0, 0, 0, 0) 100%
+        );
+
+    }
+}
+
+
+.gr-bg7 {
+    background: linear-gradient(180deg, #3E66F3 0%, #0031DD 100%);
+    border-radius: 100px;
+
+}
+.gr-bg8 {
+    background-image: linear-gradient(
+                    180deg,
+                    rgba(234, 234, 236, 1) 422px,
+                    rgba(255, 250, 250, 1) 422px,
+                    rgba(255, 255, 255, 1) 422px,
+                    rgba(255, 255, 255, 1) 100%
+    );
+}
+.gr-bg8-sm {
+    background-image: linear-gradient(
+                    180deg,
+                    rgba(234, 234, 236, 1) 26%,
+                    rgba(255, 250, 250, 1) 26%,
+                    rgba(255, 250, 250, 1) 100%
+    );
+}
+.gr-bg8-bottom{
+    background-image: linear-gradient(
+        180deg, 
+        rgba(255, 250, 250, 1) 0%, 
+        rgba(255, 250, 250, 1) 250px, 
+        rgba(234, 234, 236, 1) 20px
+    );
+}
+.gr-bg9 {
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75%;
+        height: 100%;
+        background-image: linear-gradient(
+            180deg,
+            rgba(234, 234, 236, 1) 60%,
+            rgba(255, 255, 255, 1) 60%,
+            rgba(255, 255, 255, 1) 65%,
+            rgba(255, 255, 255, 1) 100%
+        );
+        background-position: inherit;
+        background-size: inherit;
+        z-index: -1;
+        @include respond-to(md) {
+            width: 100%;
+        }
+    }
+    position: relative;
+}
+
+.gr-bg10 {
+    background-image: linear-gradient(
+                    180deg,
+                    rgba(234, 234, 236, 1) 60%,
+                    rgb(255, 255, 255) 60%,
+                    rgba(255, 255, 255, 1) 100%
+    );
+}
+
+.round-bg-black {
+    color: $white;
+    background-color: $black;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex; // Ensures content aligns properly
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+.gray-body {
+    background-color: #F8FAFF;
+}
+
+.smoke-body {
+    background-color: #F3F2EA;
+}
+
+.background-image,
+[data-bg-src] {
+    @include background-content(no-repeat, cover, center center);
+}
+
+.bg-fluid {
+    @include background-content(no-repeat, 100% 100%, center center);
+}
+
+.bg-auto {
+    background-size: auto auto;
+}
+
+.bg-top-center {
+    background-size: auto;
+    background-position: top center;
+}
+
+.bg-bottom-center {
+    background-size: auto;
+    background-position: bottom center;
+}
+
+.bg-repeat {
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.bg-bottom-right {
+    background-size: auto;
+    background-position: bottom right;
+}
+
+.bg-top-right {
+    background-size: auto;
+    background-position: top right;
+}

@@ -1,0 +1,39 @@
+#th-goverment-supplier {
+  .th-goverment-container {
+    h2, h5{
+      margin-top: 30px;
+    }
+    h6{
+      padding-right: 40px;
+      margin-bottom: 15px!important;
+    }
+    @include respond-to(lg) {
+      &.th-grid-row {
+        grid-template-rows: repeat(10, 60px)!important;
+      }
+    }
+    @include respond-to(md) {
+      &.th-grid-row {
+        grid-template-rows: repeat(2, 1fr)!important;
+        grid-template-columns: repeat(2, 1fr)!important;
+        row-gap: 25px;
+        column-gap: 25px;
+        .th-grid-area{
+          grid-area: auto!important;
+        }
+      }
+      h6{
+        padding-right: 0;
+      }
+    }
+    @include respond-to(sm) {
+      &.th-grid-row {
+        grid-template-rows: repeat(4, 1fr)!important;
+        grid-template-columns: repeat(1, 1fr)!important;
+      }
+      h2, h5{
+        margin-top: 5px;
+      }
+    }
+  }
+}

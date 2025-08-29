@@ -1,0 +1,13 @@
+#th-connect-us {
+    .th-connect-us-content-wrapper {
+        min-height: 100%;
+        .th-connect-us-content {
+            min-height: 100%;
+            .th-img-container {
+                @include respond-to(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

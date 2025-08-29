@@ -1,0 +1,44 @@
+.th-form {
+    .form-group {
+        margin-bottom: 25px;
+        label {
+            font-size: var(--label-font-size);
+            font-weight: 500;
+            color: $primary;
+            margin-bottom: 5px;
+        }
+        input {
+            border: 1px solid $primary;
+            border-radius: 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $primary;
+            background-color: #fff;
+            &::placeholder {
+                color: $gray-darker;
+            }
+            &:focus,
+            &:active,
+            &:focus-visible {
+                outline: none;
+                border-color: $secondary;
+                box-shadow: 0 0 0 2px rgba($secondary, 0.2);
+                color: $primary;
+            }
+            &:focus::placeholder {
+                color: transparent;
+            }
+            &:disabled {
+                background-color: rgba($gray, 0.1);
+                border-color: $gray;
+                cursor: not-allowed;
+            }
+            &.selected,
+            &:focus-within {
+                border-color: $secondary;
+                color: $primary;
+            }
+        }
+    }
+}

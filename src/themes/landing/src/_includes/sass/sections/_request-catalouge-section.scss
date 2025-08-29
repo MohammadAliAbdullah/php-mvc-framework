@@ -1,0 +1,25 @@
+.th-request-contact{
+    padding-top: 114px;
+    @include respond-to(md) {
+        padding-top: 40px;
+       
+      }
+    .th-requset-catalouge-content,
+    .th-getin-touch-content{
+        padding-bottom: 68px;
+        @include respond-to(md) {
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+          }
+    }
+    .th-request-catalouge-img,
+    .th-get-in-touch-img{
+        width: 100%;
+        margin-right: 56px;
+        @include respond-to(md) {
+            margin-top: 0;
+            margin-right: 0;
+          }
+        
+    }
+}

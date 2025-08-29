@@ -1,0 +1,332 @@
+/* Apply to the entire document */
+::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: transparent; /* Makes track blend with background */
+  border-radius: 10px;
+}
+
+/* Handle (scroll thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.5); /* Soft gray with transparency */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.8); /* Darker on hover */
+}
+
+/* Optional: Hide scrollbar when not in use (only for WebKit browsers) */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+/* Firefox scrollbar customization */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+.degree-45 {
+  transform: rotate(45deg);
+  display: inline-block;
+}
+.degree-50 {
+  transform: rotate(50deg);
+  display: inline-block;
+}
+.degree-60 {
+  transform: rotate(60deg);
+  display: inline-block;
+}
+
+.shape-mockup-wrap {
+  z-index: 2;
+  position: relative;
+}
+.shape-mockup {
+  position: absolute;
+  z-index: -1;
+
+  &.z-index-3 {
+    z-index: 3;
+  }
+}
+
+.z-index-step1 {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 3;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.z-index-n1 {
+  z-index: -1;
+}
+
+.th-radius2 {
+  border-radius: 20px;
+}
+
+.th-radius3 {
+  border-radius: 30px;
+}
+
+.th-radius4 {
+  border-radius: 100px;
+
+  @include sm {
+    border-radius: 50px;
+  }
+}
+
+.th-radius5 {
+  border-radius: 50px;
+}
+
+.media-body {
+  flex: 1;
+}
+
+.badge {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $primary;
+  color: $white;
+  padding: 0.25em 0.45em;
+  font-size: 0.7em;
+  border-radius: 50%;
+  top: 8px;
+  right: 8px;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+}
+
+.th-social {
+  a {
+    display: inline-block;
+    @include equal-size(var(--icon-size, 46px));
+    line-height: var(--icon-size, 46px);
+    background-color: $white;
+    color: $text;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.style2 {
+    a {
+      --icon-size: 40px;
+      font-size: 14px;
+      background-color: transparent;
+      color: $white;
+      border: 1px solid;
+
+      &:hover {
+        border-color: $primary;
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+
+  &.color-theme {
+    a {
+      color: $text;
+      border-color: $primary;
+    }
+  }
+}
+
+.slider-shadow {
+  .slick-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: -30px;
+    margin-top: -30px;
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+
+  &.style2 {
+    gap: 20px 70px;
+
+    @include sm {
+      gap: 20px 30px;
+    }
+  }
+}
+
+.th-bg-img {
+  position: absolute;
+  inset: 0;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/*sec shape  start --------------------------*/
+.sec-shape {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  &.style2 {
+    &:after,
+    &:before {
+      background: #e3e7f0;
+    }
+
+    .th-btn {
+      padding: 20.5px 40px;
+    }
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 560px;
+    height: 1px;
+    background: #656a74;
+  }
+
+  &:before {
+    margin-left: -37rem;
+  }
+
+  &:after {
+    margin-left: 2.5rem;
+  }
+}
+
+// Border
+
+.border-right-dark {
+  border-right: 1px solid $gray-darker;
+}
+
+.border-right-gray {
+  border-right: 1px solid $gray;
+  &.th-remove-border {
+    @include respond-to(mds) {
+      border-right: none;
+    }
+  }
+}
+.border-bottom-gray {
+  border-bottom: 1px solid $gray;
+}
+.border-right-0 {
+  border-right: none !important;
+}
+
+.border-right-lg-0 {
+  @include respond-to(lg) {
+    border-right: none !important;
+  }
+}
+.border-right-md-0 {
+  @include respond-to(md) {
+    border-right: none !important;
+  }
+}
+
+/*sec shape  end  --------------------------*/
+/*Icon Masking********/
+.icon-masking {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: auto;
+
+  .mask-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: hue;
+    background: $primary;
+    top: 0;
+  }
+}
+
+.icon-masking2 {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  width: auto;
+
+  .mask-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: color;
+    background: $primary;
+    top: 0;
+  }
+}
+
+/*Magnific popup transition********/
+.mfp-zoom-in .mfp-content {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: scale(0.7);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.7;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-content {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}

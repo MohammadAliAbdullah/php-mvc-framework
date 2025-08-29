@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.tpl": "php"
+    },
+    "php.validate.enable": true,
+    "php.suggest.basic": true
+}

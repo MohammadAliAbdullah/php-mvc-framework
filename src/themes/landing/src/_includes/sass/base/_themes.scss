@@ -1,0 +1,48 @@
+html,
+body {
+	scroll-behavior: auto !important;
+}
+
+body {
+    // Default Theme styles (using the "default" theme from the map)
+    background-color: map-get(map-get($themes, "default"), 'body');
+    color: map-get(map-get($themes, "default"), 'text');
+    font-family: map-get($fontMap, 'body');
+	font-size: $body-font-size;
+	font-weight: $body-font-weight;
+	line-height: $body-line-height;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+  
+    @each $theme-name, $theme-values in $themes {
+      &.theme-#{$theme-name} { // Dynamic class names
+        @each $property, $value in $theme-values {
+          --theme-#{$property}: #{$value};  // Set CSS variables for each property
+        }
+      }
+    }
+  
+  }
+
+iframe {
+	border: none;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,50 @@
+
+   .th-manufacturing-process-section{
+       background-color: gray;
+    }
+    .th-manfacturing-container {
+        //   background-color: #eaeaec !important;
+        // background-color: #eaeaec !important;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .th-manf-process-content{
+          padding-top: 100px;
+          padding-right: 100px;
+          @include respond-to(lg){
+            padding-right: 20px;
+            padding-top: 0;
+          }
+        }
+        @include respond-to(md) {
+          margin-top: 0px;
+        }
+    }
+
+    // .section-body {
+    //   padding-bottom: 60px;
+    // }
+    .right-img {
+      margin-top: -220px;
+      @include respond-to(md) {
+        margin-top: 20px;
+      }
+    }
+    .link-gap {
+      margin-top: 41px;
+      @include respond-to(md) {
+        margin-top: 25px;
+      }
+    }
+    .img-fluid {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .th-manufacturing-details{
+      font-size: 22px;
+    }
+  
+  
+ 

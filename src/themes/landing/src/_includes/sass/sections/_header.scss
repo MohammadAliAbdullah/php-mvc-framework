@@ -1,0 +1,11 @@
+.th-section-header-wrapper{
+    width: 100%;
+}
+.left{
+    .th-section-subtitle{
+        max-width: 100%;
+        @include respond-to(md){
+            max-width: 100%;
+        }
+    }
+}

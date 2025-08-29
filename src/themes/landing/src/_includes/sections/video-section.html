@@ -1,0 +1,92 @@
+<!-- <section id="about-who-you" class="@@class">
+    <div class="container th-container">
+      @@include('./header-section.html',{ 
+            "sectionTitle":"@@title",       
+            "sectionClass":"text-center",
+            'showHeader':'@@showHeader'
+        })
+      <div class="section-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bg-black">
+              <div class="th-video-player-logo  text-center text-white">
+                <img src="/img/logo_white.png" alt="" style="width: 155px">
+              </div>
+            </div>
+            @@include('../components/video-gallery.html', {
+              "id": "@@galaryId",
+              "variable": "@@galaryVariable",
+              "jsonData": "@@jsonData"
+            })
+          
+          </div>
+        </div>
+      </div>
+    </div>
+</section> -->
+
+<!--============================== Categories About video Player ==============================-->
+<section id="about-who-you" class="bg-gray" data-v-component-videogallerywhoweare>
+  <div class="container th-container">
+    <div class="th-section-header @@sectionHeaderClass" style="display: block">
+      <div class="th-section-header-wrapper text-center">
+        <h2 class="  th-section-title "> Who We Are? </h2>
+        <div class="th-section-subtitle" style="font-size: 16px;">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bg-black">
+            <div class="th-video-player-logo  text-center text-white">
+              <img src="/img/logo_white.png" alt="" style="width: 155px">
+            </div>
+          </div>
+          <style>
+            .inline-video-gallery-container {
+              width: 100%;
+              aspect-ratio: 16 / 9;
+              position: relative;
+            }
+          </style>
+          <div id="whoWeAre" class="inline-video-gallery-container">
+            <div class="inline-video-gallery-thumbnails-left" style="z-index: 1000;"></div>
+          </div>
+
+          <script data-v-gallery-whoweare>
+             
+              const whoWeAre = document.getElementById("whoWeAre");
+              const whoWeAreGallery = lightGallery(whoWeAre, {
+              container: whoWeAre,
+              dynamic: !0,
+              thumbnail: !0,
+              swipeToClose: !1,
+              addClass: 'lg-inline',
+              mode: 'lg-scale-up',
+              slideShowAutoplay: !1,
+              autoPlay: !1,
+              hash: !1,
+              pager: !1,
+              closable: !1,
+              showMaximizeIcon: !0,
+              rotate: !0,
+              download: !0,
+              thumbnailsPosition: 'left',
+              plugins: [lgZoom, lgFullscreen, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo],
+              appendSubHtmlTo: '.lg-outer',
+              autoplayFirstVideo: !1,
+              dynamicEl: whoWeAreData});
+              whoWeAreGallery.openGallery();
+              
+          </script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======== End Categories About video Player ========-->

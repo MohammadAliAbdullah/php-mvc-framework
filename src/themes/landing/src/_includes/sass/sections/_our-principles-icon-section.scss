@@ -1,0 +1,30 @@
+#our-principle{
+    .th-item-details{
+        text-align: center;
+        margin: 0 25px;
+        .th-item-title {
+            margin-bottom: 15px;
+        }
+    }
+    
+    .img-container {
+        margin-bottom: 30px;
+
+        &.principle-icon{
+            padding: 0 26%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .th-img-circle {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+    }
+}

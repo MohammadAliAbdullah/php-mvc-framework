@@ -1,0 +1,36 @@
+.th-btn-gray.active {
+  background: white !important;
+  color: $primary !important;
+  border: 2px solid $primary !important;
+}
+.th-order-tab-content-border {
+  width: 50%;
+  @include respond-to(md) {
+    width: 100%;
+  }
+}
+.th-order-soupport-left-gap {
+  @include respond-to(md) {
+    white-space: nowrap;
+  }
+}
+.th-payment-total-order-pay-now {
+  @include respond-to(md) {
+    margin-left: 200px !important;
+  }
+  @include respond-to(sm) {
+    margin-left: 200px !important;
+  }
+}
+
+.th-order-modal-pay {
+  a {
+    width: 50%;
+    @include respond-to(sm) {
+      width: 100%;
+    }
+  }
+  @include respond-to(sm) {
+    display: block;
+  }
+}

@@ -1,0 +1,184 @@
+<!--==============================
+Featured Products
+==============================-->
+<!-- <section id="projects-list" class="latest-news">
+    <div class="container th-container">
+      <div class="row">
+        
+        @@include('./header-section.html', {
+          "sectionTitle": "Latest News",
+          "sectionSubtitle": "Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.",
+          "sectionClass": "text-center"
+        })
+  
+        <div class="section-body">
+          <div class="row">
+            @@loop("../components/item-blog.html", "./data/latest-news.json")
+          </div>
+          <div class="row">
+            <div class="col-12">
+              @@include("../components/all-btn/btn-gray-load-more.html", {
+                "link_text": "View All",
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--==============================
+  End Featured Products
+  ==============================-->
+  
+  <!--============================== Featured Products ==============================-->
+  <section id="projects-list" class="latest-news" data-v-component-latestnews>
+    <div class="container th-container">
+      <div class="row">
+        <div class="section-header project-header p-0">
+          <div class="w-100 text-center mb-5">
+            <h2 class="section-title" data-v-latestnews-section_title>Latest News</h2>
+            <p class="section-subtitle" data-v-latestnews-section_subtitle>
+              Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="row project-list-row">
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+                <div class="img-container">
+                  <img src="/img/blog-page/News 1.png" alt="" data-v-latestnewsitem-image />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400" data-v-latestnewsitem-title>Krost's Sydney Office Update With 3d Tour</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+
+                <div class="img-container">
+                  <img src="/img/blog-page/News 2.png" alt="" />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400">THE BOOTH: WHERE IDEAS AND CONNECTIONS GROW</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+
+                <div class="img-container">
+                  <img src="/img/blog-page/News 3.png" alt="" />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400">Unveiling Our Updated Sydney Showroom</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+
+                <div class="img-container">
+                  <img src="/img/blog-page/News 4.png" alt="" />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400">Beyond Aesthetics: How Organic Design</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+
+                <div class="img-container">
+                  <img src="/img/blog-page/News 5.png" alt="" />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400">Watch The Full Panel Discussion On Designing</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4 project-list-gap project-list-item">
+              <div class="list-img">
+
+                <div class="img-container">
+                  <img src="/img/blog-page/News 6.png" alt="" />
+                </div>
+                <div class="add-to-pinboard position-absolute top-right-30">
+                  <i class="fa-regular fa-plus"></i>
+                </div>
+              </div>
+              <div class="card-footer">
+                <h6 class="font-weight-400">Extraordinary Sydney Showroom Event Hosted</h6>
+                <div class="link th-read-more-btn">
+                  <div class="link-text pr-5">Read More</div>
+                  <div class="link-icon-btn">
+                    <i class="fa-regular fa-arrow-up degree-60"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <button class="btn load-more">Load More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==============================  End Featured Products ==============================-->

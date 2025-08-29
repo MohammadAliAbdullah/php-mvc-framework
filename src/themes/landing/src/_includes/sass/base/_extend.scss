@@ -1,0 +1,45 @@
+// _extend.scss
+%font-base {
+  // Define the placeholder here
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+%link-styles {
+  color: var(--theme-primary); // Default color
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    //@include darken-color(--theme-primary, 15%);
+  }
+}
+
+%heading-styles {
+  // Define the placeholder here
+  font-family: $title-font;
+  font-weight: 600; // Or your desired weight
+  line-height: 1.2; // Or your preferred line-height
+  margin-bottom: 1rem; // Or your spacing
+}
+
+body {
+  @extend %font-base;
+}
+a {
+  @extend %link-styles;
+}
+
+// h1, h2, h3, h4, h5, h6 {
+//     @extend %heading-styles;
+// }
+// h4, h5, h6{
+//   font-weight: 500;
+// }
+
+// Bootstrap Overrides:
+.btn {
+  @extend .btn; // Extend Bootstrap's .btn
+  border-radius: 0 !important; // Example modification
+}

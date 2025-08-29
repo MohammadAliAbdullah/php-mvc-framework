@@ -1,0 +1,55 @@
+.th-member-info {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    .th-member-name {
+      font-size: 24px;
+      font-weight: map-get($fontWeightsMap, "semi-bold");
+    }
+    .th-member-position {
+      font-size: 18px;
+    }
+  }
+  
+  @include respond-to(mds) {
+    .showroom-item {
+      padding-bottom: 50px;
+    }
+  }
+  .th-member-title {
+    margin-bottom: 30px;
+  }
+  .th-member {
+    min-height: 401px;
+    position: relative;
+    @include respond-to(md) {
+      margin-bottom: 20px;
+    }
+    .th-member-icons {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      span {
+        width: 57px;
+        height: 55px;
+        background-color: $gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+    .th-member-info-container {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      color: $white;
+    }
+  }

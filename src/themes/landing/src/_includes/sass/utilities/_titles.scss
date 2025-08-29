@@ -1,0 +1,165 @@
+
+.sec-title {
+    margin-bottom: calc(var(--section-title-space) - 10px);
+    margin-top: -0.32em;
+    text-transform: capitalize;
+
+    &.sec-title2 {
+        span {
+            display: inline-block;
+            position: relative;
+            color: $primary;
+
+            &:after {
+                content: "";
+                height: 15px;
+                width: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='215' height='19' viewBox='0 0 215 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 16.9999C37.6667 5.9999 129.8 -9.4001 213 16.9999' stroke='%23407360' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+                background-size: cover;
+                background-repeat: repeat-x;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                animation: titleFill 3s linear infinite;
+            }
+        }
+    }
+}
+
+
+.box-title {
+    font-size: 24px;
+    line-height: 1.417;
+    font-weight: 700;
+    margin-top: -0.32em;
+
+    a {
+        color: inherit;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.sec-text {
+    max-width: 720px;
+}
+
+.title-area {
+    margin-bottom: calc(var(--section-title-space) - 10px);
+    position: relative;
+    z-index: 2;
+
+    &.style2 {
+        margin-top: -8px;
+    }
+
+    .sec-title {
+        margin-bottom: 15px;
+    }
+
+    &.mb-0 {
+        .sec-title {
+            margin-bottom: -0.41em;
+        }
+    }
+
+    .th-btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+hr.title-line {
+    margin-top: 0;
+    background-color: $border;
+    opacity: 1;
+}
+
+.sec-btn,
+.title-line {
+    margin-bottom: var(--section-title-space);
+}
+
+.shadow-title {
+    font-family: $title-font;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 1;
+    background-image: linear-gradient(180deg, rgba(226, 232, 250, 0.7) 0%, rgba(226, 232, 250, 0) 88.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: -0.55em 0 -0.45em -0.25em;
+
+    &.color2 {
+        background-image: linear-gradient(180deg, #232C47 0%, rgba(20, 29, 56, 0) 91.15%);
+    }
+
+    &.color3 {
+        background-image: linear-gradient(180deg, #E0E0E0 0%, rgba(220, 214, 214, 0) 93.75%);
+    }
+}
+
+
+@include lg {
+    .sub-title {
+        margin-bottom: 20px;
+    }
+
+    .shadow-title {
+        font-size: 64px;
+    }
+
+    .title-area,
+    .sec-title {
+        --section-title-space: 60px;
+
+        &.mb-45 {
+            margin-bottom: 36px;
+        }
+
+        &.mb-50 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .sec-btn,
+    .title-line {
+        --section-title-space: 55px;
+    }
+}
+
+@include md {
+    .shadow-title {
+        font-size: 60px;
+    }
+
+    .title-area,
+    .sec-title {
+        --section-title-space: 50px;
+
+        &.mb-45 {
+            margin-bottom: 35px;
+        }
+    }
+
+    .sec-btn,
+    .title-line {
+        --section-title-space: 50px;
+    }
+}
+
+@include xs {
+    .shadow-title {
+        font-size: 52px;
+    }
+}
+
+@include vxs {
+    .shadow-title {
+        font-size: 40px;
+    }
+}

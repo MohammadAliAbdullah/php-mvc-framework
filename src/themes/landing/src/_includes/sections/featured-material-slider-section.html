@@ -1,0 +1,112 @@
+<!--==============================
+Featured Material
+==============================-->
+<!-- <section id="th-featured-material" class="featured-material gr-bg8">
+    <div class="container th-container">
+        <div class="row">
+            @@include('./header-section.html',{ 
+                "sectionTitle":"Featured Materials",
+                "sectionSubtitle":"Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.",
+                "sectionLinkText":"View All Products",
+                "sectionClass":"left flex-1",
+                "sectionRightClass":"right",
+                "fontSize":"20px !important"
+            })
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swiper th-featured-material-slider">
+                            <div class="swiper-wrapper">
+                                @@loop("../components/item-featured-material-slider.html", "./data/featured-materials-slider.json")
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--==============================
+End Featured Material
+==============================-->
+
+
+<!--============================== Featured Material ==============================-->
+<section id="th-featured-material" class="featured-material gr-bg8" data-v-component-featuredmaterialslider>
+    <div class="container th-container">
+      <div class="row">
+        <div class="th-section-header">
+          <div class="th-section-header-wrapper left flex-1">
+            <h2 class="th-section-title" data-v-featuredmaterialslider-section_title> Featured Materials </h2>
+            <div class="th-section-subtitle" style="font-size:  20px !important " data-v-featuredmaterialslider-section_subtitle>
+              Lorem ipsum dolor sit amet consectetur. Scelerisque urna pellentesque.
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="th-section-header-link">
+              <span class="th-section-header-link-text View All ProductsClass" data-v-featuredmaterialslider-section_link_text>View All Products</span>
+              <span class="th-section-header-link-btn">
+                <i class="fa-regular fa-arrow-up degree-60"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="swiper th-featured-material-slider" >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/img/project-detail/material 1.png" data-v-featuredmaterialslideritem-image />
+                    <div class="slider-footer">
+                      <p data-v-featuredmaterialslideritem-category>Finish</p>
+                      <h3 class="title" data-v-featuredmaterialslideritem-name>ABBEY</h3>
+                      <span data-v-featuredmaterialslideritem-description>Lorem Ipsum</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/project-detail/material 2.png" />
+                    <div class="slider-footer">
+                      <p>Textile</p>
+                      <h3 class="title">Access Mesh</h3>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/project-detail/material 3.png" />
+                    <div class="slider-footer">
+                      <p>Textile</p>
+                      <h3 class="title">Afghan Seating</h3>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/project-detail/material 4.png" />
+                    <div class="slider-footer">
+                      <p>Finish</p>
+                      <h3 class="title">Amethyst</h3>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/img/project-detail/material 5.png" />
+                    <div class="slider-footer">
+                      <p>Finish</p>
+                      <h3 class="title">Amethyst</h3>
+                      <span>Lorem Ipsum</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--============================== End Featured Material ==============================-->

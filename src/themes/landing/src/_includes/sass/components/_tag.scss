@@ -1,0 +1,18 @@
+.th-search-offcanvas-tag-item {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 25px;
+  row-gap: 10px;
+  margin-top: 18px;
+
+  span {
+    background-color: $gray-light;
+    padding: 6px 17px;
+    font-size: var(--body-font-size);
+    color: #2e2e2e;
+    text-align: center;
+    line-height: 157%;
+    font-weight: 500;
+    letter-spacing: 2%;
+  }
+}

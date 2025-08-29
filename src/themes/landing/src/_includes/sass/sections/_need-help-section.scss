@@ -1,0 +1,30 @@
+#need-help-section {
+    background-color: $white;
+    .th-need-help-container{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin: 0 28px;
+      gap:70px;
+      
+      @include respond-to(lg){
+        gap: 20px;
+      }
+      @include respond-to(md){
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+      }
+      @include respond-to(sm){
+        grid-template-columns: repeat(1, 1fr);
+        margin: 17px;
+      }
+  
+      @include respond-to(xs){
+        margin: 0;
+      }
+    }
+    img{
+      padding-bottom: $image-space;
+    }
+  }
+  
+  

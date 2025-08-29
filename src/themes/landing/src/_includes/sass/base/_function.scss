@@ -1,0 +1,105 @@
+
+// Function For Letter Spacing
+@function letter-spacing($psValue, $return: 'em', $fSize: '16') {
+  @if $return=='em' {
+    @return ($psValue) * 0.001 + em;
+  }
+
+  @else {
+    @return ($psValue * $fSize) * 0.001;
+  }
+}
+
+@mixin letter-spacing($space) {
+  letter-spacing: letter-spacing($space);
+}
+
+
+// Convert a hex value to comma-delimited rgb values
+@function convert-rgb($hex) {
+  @return red($hex),
+  green($hex),
+  blue($hex);
+}
+
+// 1. Theme Color Modifier:
+@function theme-color($variant) {
+  @if ($variant == "dark") {
+    @return color-mix(in srgb, var(--theme-primary) 80%, black); // Darkens by 20%
+  } @else if ($variant == "light") {
+    @return color-mix(in srgb, var(--theme-primary) 80%, white); // Lightens by 20%
+  } @else {
+    @return var(--theme-primary); // Default
+  }
+}
+
+
+// 2. Font Size Adjuster:
+@function font-size($size, $base-size: $body-font-size) {
+  @return ($size / $base-size) * 1rem;  // Fluid font sizes
+}
+
+
+// 3. Spacing Multiplier:
+@function spacing($multiplier) {
+    @return $base-spacing * $multiplier; // Customize spacing increments
+}
+
+
+// 4. Border Radius Modifier:
+@function border-radius($variant) {
+  @if ($variant == "rounded") {
+    @return 1rem; 
+  } @else if ($variant == "pill") {
+    @return 50rem; // Large value for pill shape
+  } @else {
+    @return 0.25rem; // Default
+  }
+}
+
+// 5. Opacity Adjuster:
+@function opacity($value) {
+  @return $value / 100; // Converts 0-100 scale to 0-1
+}
+
+
+// 6. Color from Map:
+@function color-from-map($color-name) {
+  @return map-get($colors-map, $color-name);
+}
+
+// 7. Font Family from Map:
+@function font-family-from-map($font-name) {
+    @return map-get($fontsMap, $font-name);
+}
+
+
+
+// 8. Responsive Font Size:
+@function responsive-font-size($min-size, $max-size, $min-vw: $vxs, $max-vw: $hd) {
+    $slope: ($max-size - $min-size) / ($max-vw - $min-vw);
+    $intercept: $min-size - $slope * $min-vw;
+    @return clamp(#{$min-size}px, #{$intercept + $slope * 100}vw, #{$max-size}px);
+}
+
+// 9. Box Shadow Generator:
+@function box-shadow($x, $y, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+        @return inset $x $y $blur $spread $color;
+    } @else {
+        @return $x $y $blur $spread $color;
+    }
+}
+
+
+
+// 10. Gradient Generator:
+@function gradient($direction, $start-color, $end-color) {
+    @return linear-gradient($direction, $start-color, $end-color);
+}
+
+// Transition Generator:
+@function transition($properties, $duration: 0.3s, $timing-function: ease-in-out, $delay: 0s) {
+  @return $properties $duration $timing-function $delay;
+}
+
