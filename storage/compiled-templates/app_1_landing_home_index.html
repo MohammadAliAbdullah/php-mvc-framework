@@ -1,0 +1,494 @@
+<!DOCTYPE html><html lang="en"><head><base href="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+  <title><?php echo App\Core\System\utils\__('PHP Fullstack Developer - Mohammed Ali Abdullah'); ?></title>
+
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css">
+
+</head>
+
+<body class="text-center" style="height: auto;">
+  <div class="d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand"><?php echo App\Core\System\utils\__('Cover'); ?></h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="/"><?php echo App\Core\System\utils\__('Home'); ?></a>
+          <a class="nav-link" href="/blog"><?php echo App\Core\System\utils\__('Blog'); ?></a>
+          <a class="nav-link" href="/contact"><?php echo App\Core\System\utils\__('Contact'); ?></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app"><?php 
+ $data = $this->parameters;
+ ?>
+      <div>
+        <h1 data-v-title="" class="cover-heading"><?php  echo $data['title'];  ?></h1>
+        <h3 data-v-description=""><?php  echo $data['description'];  ?></h3>
+        <p data-v-intro="" class="lead"><?php  echo $data['intro'];  ?></p>
+
+        <ul id="instructions" class="text-left"><?php  foreach($data['instructions'] as $instruction) {  ?>
+          <li data-v-instruction=""><?php  echo $instruction;  ?></li>
+        <?php  } ?></ul>
+      </div>
+      <p class="lead">
+        <a data-v-action="" href="#" class="btn btn-lg btn-secondary"><?php  echo $data['button_text'];  ?></a>
+      </p>
+    </main>
+
+    <section id="guide" class="text-left " style="color: #000 !important; text-shadow: none;">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mb-4" style="color: #fff"><?php echo App\Core\System\utils\__('🚀 PHP MVC Framework'); ?></h2>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('📋 Overview'); ?></h3>
+              </div>
+              <div class="card-body">
+                <p><?php echo App\Core\System\utils\__('This guide explains how to create new routes in your PHP MVC framework, following the established pattern used in your codebase.'); ?></p>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('📁 File Structure Example'); ?></h3>
+              </div>
+              <div class="card-body">
+                <pre><code>src/
+├── Core/
+│   ├── Controllers/
+│   │   └── HomeController.php          ← Step 1
+│   └── templates/
+│       └── home/
+│           └── index.tpl               ← Step 2
+├── Models/
+│   └── User.php
+└── Repositories/
+    └── UserRepository.php
+
+themes/
+└── landing/
+    └── src/                           ← Step 3
+        └── home/
+            └── index.html</code></pre>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🎯 Complete Route Creation Process'); ?></h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Step 1: Create Controller Action'); ?></strong>
+                </h4>
+                <p><?php echo App\Core\System\utils\__('Create or modify a controller in'); ?> <code>src/Core/Controllers/</code> <?php echo App\Core\System\utils\__('directory.'); ?></p>
+
+                <h5><?php echo App\Core\System\utils\__('Example:'); ?> <code>HomeController.php</code>
+                </h5>
+                <pre><code class="language-php">&lt;?php
+namespace App\Core\Controllers;
+
+use App\Core\Http\Controller;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        // Data passed here will be available in template as $this-&gt;parameters
+        $this-&gt;parameters = [
+            'title' =&gt; 'Welcome to My App',
+            'description' =&gt; 'A beautiful landing page',
+            'posts' =&gt; [
+                ['title' =&gt; 'First Post', 'content' =&gt; 'Content here'],
+                ['title' =&gt; 'Second Post', 'content' =&gt; 'More content']
+            ]
+        ];
+        
+        // Return view name (corresponds to template file)
+        return 'home/index';
+    }
+    
+    public function about()
+    {
+        $this-&gt;parameters = [
+            'title' =&gt; 'About Us',
+            'team' =&gt; ['John', 'Jane', 'Bob']
+        ];
+        
+        return 'home/about';
+    }
+}</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Step 2: Create Template File (.tpl)'); ?></strong>
+                </h4>
+                <p><?php echo App\Core\System\utils\__('Create a'); ?> <code>.tpl</code> <?php echo App\Core\System\utils\__('file in'); ?> <code>src/Core/templates/{controller}/{action}.tpl</code>
+                </p>
+
+                <h5><?php echo App\Core\System\utils\__('Example:'); ?> <code>src/Core/templates/home/index.tpl</code>
+                </h5>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this-&gt;parameters;
+$html = &lt;&lt;&lt;HTML
+&lt;div&gt;
+    &lt;h1 class="cover-heading"&gt;{$data['title']}&lt;/h1&gt;
+    &lt;h3&gt;({$data['description']})&lt;/h3&gt;
+    &lt;p class="lead"&gt;Cover is a one-page template for building simple and beautiful home pages.&lt;/p&gt;
+    &lt;p class="lead"&gt;
+        &lt;a href="#" class="btn btn-lg btn-secondary"&gt;Learn more&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;ul&gt;
+HTML;
+
+foreach ($data['posts'] as $post) {
+    $html .= "&lt;li&gt;{$post['title']}&lt;/li&gt;";
+}
+
+$html .= &lt;&lt;&lt;HTML
+    &lt;/ul&gt;
+&lt;/div&gt;
+HTML;
+
+echo $html;
+?&gt;</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Step 3: Create HTML Source File'); ?></strong>
+                </h4>
+                <p><?php echo App\Core\System\utils\__('Create the HTML file in'); ?> <code>themes/landing/src/{controller}/{action}.html</code>
+                </p>
+
+                <h5><?php echo App\Core\System\utils\__('Example:'); ?> <code>themes/landing/src/home/index.html</code>
+                </h5>
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Home Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;!-- This is where your .tpl content will be injected --&gt;
+        &lt;!-- The #app selector tells the system where to append content --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Step 4: Auto-Generation Process'); ?></strong>
+                </h4>
+                <p><?php echo App\Core\System\utils\__('The system automatically:'); ?></p>
+                <ol>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Reads'); ?></strong> <?php echo App\Core\System\utils\__('from'); ?> <code>themes/landing/src/</code> <?php echo App\Core\System\utils\__('folder'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Processes'); ?></strong> <?php echo App\Core\System\utils\__('the'); ?> <code>.tpl</code> <?php echo App\Core\System\utils\__('template'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Generates'); ?></strong> <?php echo App\Core\System\utils\__('final HTML in'); ?> <code>themes/landing/{controller}/</code> <?php echo App\Core\System\utils\__('folder'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Injects'); ?></strong> <?php echo App\Core\System\utils\__('processed content into the HTML file'); ?>
+ </li>
+                </ol>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🔧 Key Concepts'); ?></h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Template Syntax'); ?></strong>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>
+                      <code>#app | append =</code>
+                    </strong> <?php echo App\Core\System\utils\__('- Tells the system to append content to'); ?> <code>#app</code> <?php echo App\Core\System\utils\__('element'); ?>
+ </li>
+                  <li>
+                    <strong>
+                      <code>$this-&gt;parameters</code>
+                    </strong> <?php echo App\Core\System\utils\__('- Contains all data passed from controller'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Heredoc syntax'); ?></strong> <?php echo App\Core\System\utils\__('- Use'); ?> <code>&lt;&lt;&lt;HTML</code> <?php echo App\Core\System\utils\__('for clean HTML writing'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Variable interpolation'); ?></strong> <?php echo App\Core\System\utils\__('- Use'); ?> <code><?php if (isset($variable)) {
+                                if (is_array($variable)) {
+                                    if ('') {
+                                        $modified = ($variable);
+                                        echo json_encode($modified);
+                                    } else {
+                                        echo json_encode($variable);
+                                    }
+                                } else {
+                                    echo $variable;
+                                }
+                            }
+                        ?></code> <?php echo App\Core\System\utils\__('inside heredoc'); ?>
+ </li>
+                </ul>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Data Flow'); ?></strong>
+                </h4>
+                <pre><code>Controller → Template (.tpl) → HTML Source → Generated HTML
+    ↓              ↓              ↓              ↓
+Parameters → Process Data → Inject Content → Final Output</code></pre>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🛠️ Available Tools'); ?></h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Models & Repositories'); ?></strong>
+                </h4>
+                <pre><code class="language-php">// In your controller
+use App\Core\Models\User;
+use App\Core\Repositories\UserRepository;
+
+public function users()
+{
+    $userRepo = new UserRepository();
+    $users = $userRepo-&gt;getAll();
+    
+    $this-&gt;parameters = [
+        'users' =&gt; $users
+    ];
+    
+    return 'user/list';
+}</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Database Operations'); ?></strong>
+                </h4>
+                <pre><code class="language-php">// Using models
+$user = new User();
+$user-&gt;name = 'John Doe';
+$user-&gt;email = 'john@example.com';
+$user-&gt;save();
+
+// Using repositories
+$userRepo = new UserRepository();
+$user = $userRepo-&gt;findById(1);</code></pre>
+              </div>
+            </div>
+
+
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🎨 Template Examples'); ?></h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Simple Data Display'); ?></strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this-&gt;parameters;
+echo "&lt;h1&gt;{$data['title']}&lt;/h1&gt;";
+echo "&lt;p&gt;{$data['description']}&lt;/p&gt;";
+?&gt;</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Loop Through Data'); ?></strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this-&gt;parameters;
+echo "&lt;ul&gt;";
+foreach ($data['users'] as $user) {
+    echo "&lt;li&gt;{$user['name']} - {$user['email']}&lt;/li&gt;";
+}
+echo "&lt;/ul&gt;";
+?&gt;</code></pre>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Conditional Rendering'); ?></strong>
+                </h4>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this-&gt;parameters;
+if (!empty($data['posts'])) {
+    echo "&lt;div class='posts'&gt;";
+    foreach ($data['posts'] as $post) {
+        echo "&lt;article&gt;&lt;h2&gt;{$post['title']}&lt;/h2&gt;&lt;/article&gt;";
+    }
+    echo "&lt;/div&gt;";
+} else {
+    echo "&lt;p&gt;No posts available.&lt;/p&gt;";
+}
+?&gt;</code></pre>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('⚠️ Important Notes'); ?></h3>
+              </div>
+              <div class="card-body">
+                <ol>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Always use'); ?> <code>$this-&gt;parameters</code>
+                    </strong> <?php echo App\Core\System\utils\__('to access controller data in templates'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Template files (.tpl)'); ?></strong> <?php echo App\Core\System\utils\__('are processed by the Vtpl system'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('HTML source files'); ?></strong> <?php echo App\Core\System\utils\__('go in'); ?> <code>themes/landing/src/</code> <?php echo App\Core\System\utils\__('folder'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Generated files'); ?></strong> <?php echo App\Core\System\utils\__('appear in'); ?> <code>themes/landing/{controller}/</code> <?php echo App\Core\System\utils\__('folder'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Use'); ?> <code>#app</code> <?php echo App\Core\System\utils\__('selector'); ?></strong> <?php echo App\Core\System\utils\__('in HTML source for content injection'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Template syntax'); ?></strong> <?php echo App\Core\System\utils\__('must be valid PHP code'); ?>
+ </li>
+                </ol>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🔍 Troubleshooting'); ?></h3>
+              </div>
+              <div class="card-body">
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Common Issues'); ?></strong>
+                </h4>
+                <ul>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Template not found'); ?></strong><?php echo App\Core\System\utils\__(': Check file path and naming convention'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Data not available'); ?></strong><?php echo App\Core\System\utils\__(': Ensure'); ?> <code>$this-&gt;parameters</code> <?php echo App\Core\System\utils\__('is set in controller'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('HTML not generated'); ?></strong><?php echo App\Core\System\utils\__(': Verify HTML source file exists in correct location'); ?>
+ </li>
+                  <li>
+                    <strong><?php echo App\Core\System\utils\__('Syntax errors'); ?></strong><?php echo App\Core\System\utils\__(': Check PHP syntax in .tpl files'); ?>
+ </li>
+                </ul>
+
+                <h4>
+                  <strong><?php echo App\Core\System\utils\__('Debug Tips'); ?></strong>
+                </h4>
+                <pre><code class="language-php">// In your template, add debugging
+#app | append = &lt;?php
+var_dump($this-&gt;parameters);
+echo "&lt;pre&gt;" . print_r($this-&gt;parameters, true) . "&lt;/pre&gt;";
+?&gt;</code></pre>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('📚 Quick Reference'); ?></h3>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th><?php echo App\Core\System\utils\__('Step'); ?></th>
+                        <th><?php echo App\Core\System\utils\__('File Location'); ?></th>
+                        <th><?php echo App\Core\System\utils\__('Purpose'); ?></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <code>src/Core/Controllers/{Name}Controller.php</code>
+                        </td>
+                        <td><?php echo App\Core\System\utils\__('Define action and data'); ?></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                          <code>src/Core/templates/{controller}/{action}.tpl</code>
+                        </td>
+                        <td><?php echo App\Core\System\utils\__('Process data and generate HTML'); ?></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                          <code>themes/landing/src/{controller}/{action}.html</code>
+                        </td>
+                        <td><?php echo App\Core\System\utils\__('HTML structure and styling'); ?></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                          <code>themes/landing/{controller}/{action}.html</code>
+                        </td>
+                        <td><?php echo App\Core\System\utils\__('Auto-generated final output'); ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="card mb-4">
+              <div class="card-header">
+                <h3><?php echo App\Core\System\utils\__('🎉 Conclusion'); ?></h3>
+              </div>
+              <div class="card-body">
+                <p><?php echo App\Core\System\utils\__('This pattern ensures clean separation of concerns and maintainable code structure! 🚀'); ?></p>
+                <p>
+                  <strong><?php echo App\Core\System\utils\__('Remember:'); ?></strong> <?php echo App\Core\System\utils\__('The key is following the established pattern: Controller → Template → HTML Source → Generated Output.'); ?>
+ </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p><?php echo App\Core\System\utils\__('Cover template for'); ?> <a href="https://getbootstrap.com/"><?php echo App\Core\System\utils\__('Bootstrap'); ?></a><?php echo App\Core\System\utils\__(', by'); ?> <a href="https://twitter.com/mdo"><?php echo App\Core\System\utils\__('@mdo'); ?></a>.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"  ></script>
+  <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"  ></script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"  ></script>
+
+
+</body></html>
