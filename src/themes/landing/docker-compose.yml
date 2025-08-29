@@ -12,12 +12,12 @@ services:
       - '.:/home/node/app'
       - './nodejs.sh:/home/node/app/nodejs.sh'
     ports:
-      - 3002:3000
-      - 3003:3001
+      - 3001:3000
+      - 3002:3001
     expose:
+      - 3001
       - 3002
-      - 3003
-      - 8090
+      - 8099
     networks:
       app:
         aliases:

@@ -80,4 +80,6 @@ interface BaseRepositoryInterface
      * @return Model
      */
     public function getModel(): MODEL;
+
+    public function getRecent(int $limit = 10): array;
 }

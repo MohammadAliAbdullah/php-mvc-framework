@@ -159,4 +159,9 @@ abstract class BaseRepository implements BaseRepositoryInterface
     {
         return $this->model;
     }
+
+    public function getRecent(int $limit = 10): array
+    {
+        return $this->model->orderBy('created_at', 'DESC')->limit($limit)->findAll();
+    }
 }

@@ -60,16 +60,16 @@
             <!-- File Structure Example -->
             <div class="card mb-4">
               <div class="card-header">
-                <h3>📁 Complete File Structure Example</h3>
+                <h3>📁 File Structure Example</h3>
               </div>
               <div class="card-body">
                 <pre><code>src/
 ├── Core/
 │   ├── Controllers/
-│   │   └── HomeController.php          ← Step 1: Controller Logic
+│   │   └── HomeController.php          ← Step 1
 │   └── templates/
 │       └── home/
-│           └── index.tpl               ← Step 2: Template Processing
+│           └── index.tpl               ← Step 2
 ├── Models/
 │   └── User.php
 └── Repositories/
@@ -77,136 +77,9 @@
 
 themes/
 └── landing/
-    ├── src/                            ← Step 3: Source Files (Development)
-    │   ├── home/
-    │   │   ├── index.html              ← HTML Structure
-    │   │   ├── index.scss              ← SASS Styles
-    │   │   └── _variables.scss         ← SASS Variables
-    │   ├── scss/                       ← Global SASS
-    │   │   ├── main.scss               ← Main SASS Entry
-    │   │   ├── _variables.scss         ← Global Variables
-    │   │   ├── _mixins.scss            ← SASS Mixins
-    │   │   └── _utilities.scss         ← Utility Classes
-    │   ├── js/                         ← JavaScript Files
-    │   │   └── main.js
-    │   └── assets/                     ← Images, Fonts, etc.
-    │       ├── images/
-    │       └── fonts/
-    ├── home/                           ← Generated Output (Production)
-    │   └── index.html                  ← Compiled HTML
-    ├── css/                            ← Compiled CSS
-    │   ├── main.css                    ← Compiled from SASS
-    │   └── main.min.css                ← Minified CSS
-    ├── js/                             ← Compiled JavaScript
-    │   ├── main.js
-    │   └── main.min.js                 ← Minified JS
-    ├── gulpfile.js                     ← Build Automation
-    ├── package.json                    ← Node Dependencies
-    └── node_modules/                   ← Installed Packages</code></pre>
-              </div>
-            </div>
-
-            <!-- Gulp Workflow Explanation -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h3>🔧 Gulp Workflow & SASS Integration</h3>
-              </div>
-              <div class="card-body">
-                
-                <h4><strong>Development Workflow (src/ folder)</strong></h4>
-                <ul>
-                  <li><strong><code>index.html</code></strong> - Your HTML structure with design elements</li>
-                  <li><strong><code>index.scss</code></strong> - Component-specific SASS styles</li>
-                  <li><strong><code>_variables.scss</code></strong> - Local SASS variables (colors, fonts, spacing)</li>
-                  <li><strong><code>_mixins.scss</code></strong> - Reusable SASS patterns</li>
-                </ul>
-
-                <h4><strong>Build Process (gulpfile.js)</strong></h4>
-                <pre><code class="language-javascript">// Example gulpfile.js structure
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
-
-// SASS compilation
-gulp.task('sass', () => {
-  return gulp.src('src/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('css/'));
-});
-
-// Watch for changes
-gulp.task('watch', () => {
-  gulp.watch('src/**/*.scss', gulp.series('sass'));
-  gulp.watch('src/**/*.html', gulp.series('html'));
-});</code></pre>
-
-                <h4><strong>SASS to CSS Transformation</strong></h4>
-                <pre><code>SCSS Input (src/)          →    CSS Output (css/)
-├── index.scss                    ├── main.css
-├── _variables.scss               └── main.min.css
-├── _mixins.scss
-└── _utilities.scss</code></pre>
-
-                <h4><strong>How Gulp Helps with HTML Design</strong></h4>
-                
-                <h5><strong>1. Live Reload & Development</strong></h5>
-                <ul>
-                  <li><strong>Watch files</strong> for changes in real-time</li>
-                  <li><strong>Auto-compile</strong> SASS to CSS instantly</li>
-                  <li><strong>Browser refresh</strong> when files change</li>
-                  <li><strong>Hot reload</strong> for faster development</li>
-                </ul>
-
-                <h5><strong>2. SASS Compilation Benefits</strong></h5>
-                <ul>
-                  <li><strong>Variables</strong>: <code>$primary-color: #007bff;</code></li>
-                  <li><strong>Nesting</strong>: Clean, organized CSS structure</li>
-                  <li><strong>Mixins</strong>: Reusable design patterns</li>
-                  <li><strong>Functions</strong>: Dynamic color calculations</li>
-                  <li><strong>Partials</strong>: Modular SASS organization</li>
-                </ul>
-
-                <h5><strong>3. Production Optimization</strong></h5>
-                <ul>
-                  <li><strong>CSS minification</strong> for smaller file sizes</li>
-                  <li><strong>Autoprefixer</strong> for cross-browser compatibility</li>
-                  <li><strong>Source maps</strong> for debugging</li>
-                  <li><strong>Asset optimization</strong> (images, fonts)</li>
-                </ul>
-
-                <h5><strong>4. Workflow Integration</strong></h5>
-                <pre><code>Developer writes SASS → Gulp watches → Auto-compile → Browser updates
-     ↓                    ↓            ↓            ↓
-  index.scss         gulp watch    CSS output   Live preview</code></pre>
-
-                <h4><strong>Development Commands</strong></h4>
-                <pre><code class="language-bash"># Install dependencies
-npm install
-
-# Development mode (watch files)
-gulp watch
-
-# Build for production
-gulp build
-
-# Clean generated files
-gulp clean</code></pre>
-
-                <h4><strong>Benefits for HTML Design</strong></h4>
-                <ol>
-                  <li><strong>Faster Development</strong> - Live reload and auto-compilation</li>
-                  <li><strong>Better Organization</strong> - Modular SASS structure</li>
-                  <li><strong>Professional Workflow</strong> - Industry-standard build tools</li>
-                  <li><strong>Cross-browser Support</strong> - Automatic vendor prefixes</li>
-                  <li><strong>Performance</strong> - Minified and optimized output</li>
-                  <li><strong>Maintainability</strong> - Clean, organized code structure</li>
-                </ol>
-
-                <div class="alert alert-info">
-                  <strong>💡 Pro Tip:</strong> This workflow allows developers to write modern SASS code while Gulp automatically handles the compilation, optimization, and browser compatibility!
-                </div>
+    └── src/                           ← Step 3
+        └── home/
+            └── index.html</code></pre>
               </div>
             </div>
 
@@ -266,18 +139,30 @@ class HomeController extends Controller
 
                 <h5>Example: <code>src/Core/templates/home/index.tpl</code>
                 </h5>
-                <pre><code class="language-php">
-                  #app | prepend = &lt;?php $data = $this-&gt;parameters;?&gt;
-              
-              h1[data-v-title] | innerText = &lt;?php echo $data['title']; ?&gt;
-              h3[data-v-description] | innerText = &lt;?php echo $data['description']; ?&gt;
-              p[data-v-intro] | innerText = &lt;?php echo $data['intro']; ?&gt;
-              
-              #instructions | prepend = &lt;?php foreach($data['instructions'] as $instruction) { ?&gt;
-                  li[data-v-instruction] | innerHTML = &lt;?php echo $instruction; ?&gt;
-              #instructions | append = &lt;?php }?&gt;
-              
-              a[data-v-action] | innerText = &lt;?php echo $data['button_text']; ?&gt;</code></pre>
+                <pre><code class="language-php">#app | append = &lt;?php
+$data = $this->parameters;
+$html = &lt;&lt;&lt;HTML
+&lt;div&gt;
+    &lt;h1 class="cover-heading"&gt;{$data['title']}&lt;/h1&gt;
+    &lt;h3&gt;({$data['description']})&lt;/h3&gt;
+    &lt;p class="lead"&gt;Cover is a one-page template for building simple and beautiful home pages.&lt;/p&gt;
+    &lt;p class="lead"&gt;
+        &lt;a href="#" class="btn btn-lg btn-secondary"&gt;Learn more&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;ul&gt;
+HTML;
+
+foreach ($data['posts'] as $post) {
+    $html .= "&lt;li&gt;{$post['title']}&lt;/li&gt;";
+}
+
+$html .= &lt;&lt;&lt;HTML
+    &lt;/ul&gt;
+&lt;/div&gt;
+HTML;
+
+echo $html;
+?&gt;</code></pre>
 
                 <h4>
                   <strong>Step 3: Create HTML Source File</strong>
