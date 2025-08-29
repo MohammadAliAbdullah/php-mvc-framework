@@ -143,7 +143,8 @@ class Request
      * @param  mixed  $default
      * @return mixed
      */
-    public function query(string $key = null, mixed $default = null): mixed
+    // modify abdullah 29/08/2025 string to ?string (nullable string)
+    public function query(?string $key = null, mixed $default = null): mixed 
     {
         return $key ? $this->query[$key] ?? $default : $this->query;
     }
@@ -224,7 +225,9 @@ class Request
             // Common approach: check if it starts with "HTTP_" (typical for HTTP headers in $_SERVER).
             if (str_starts_with($key, 'HTTP_')) {
                 // Convert HTTP_HEADER_NAME to Header-Name
-                $headerName = str_replace(' ', '-',
+                $headerName = str_replace(
+                    ' ',
+                    '-',
                     ucwords(strtolower(str_replace('_', ' ', substr($key, 5))))
                 );
                 $headers[$headerName] = $value;
@@ -335,16 +338,16 @@ class Request
             $query = "SELECT COUNT(*) FROM $table WHERE $column = ?";
             // Prepare the statement
             $stmt = $db->prepare($query);
-            
+
             // Bind the parameter
             $stmt->bindParam(1, $value);
-            
+
             // Execute the query
             $stmt->execute();
-            
+
             // Fetch the result
             $result = $stmt->fetchColumn();
-            
+
             return $result > 0;
         } catch (PDOException $e) {
             // Log the error or handle it as needed
@@ -355,6 +358,6 @@ class Request
     public function canSkipValidation(string $field, array $rulesArray): bool
     {
         return (!in_array('required', $rulesArray) && !array_key_exists($field, $this->post))
-        || (in_array('nullable', $rulesArray) && array_key_exists($field, $this->post));
+            || (in_array('nullable', $rulesArray) && array_key_exists($field, $this->post));
     }
 }
