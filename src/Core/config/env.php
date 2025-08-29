@@ -71,7 +71,7 @@ defined('DIR_SYSTEM') || define('DIR_SYSTEM', DIR_ROOT . 'system' . DS);
 defined('PAGE_CACHE_DIR') || define('PAGE_CACHE_DIR', 'page-cache' . DS);
 defined('DIR_CACHE') || define('DIR_CACHE', DIR_ROOT . join(DS, ['storage', 'cache']) . DS);
 defined('DIR_PLUGINS') || define('DIR_PLUGINS', DIR_ROOT . join(DS, ['src', 'Plugins']). DS);
-defined('DIR_COMPILED_TEMPLATES') || define('DIR_COMPILED_TEMPLATES', DIR_STORAGE . 'compiled-templates' . DS);
+defined('DIR_COMPILED_TEMPLATES') || define('DIR_COMPILED_TEMPLATES', DIR_STORAGE . 'compiled-templates' . DS); // not found in storage folder -- create foler compiled-templates use cmd -- mkdir -p /var/www/html/storage/compiled-templates -- chmod 777 /var/www/html/storage
 defined('DIR_BACKUP') || define('DIR_BACKUP', DIR_STORAGE . 'backup' . DS);
 defined('DIR_THEMES') || define('DIR_THEMES', DIR_ROOT . join(DS, ['themes']) . DS);
 defined('DIR_PUBLIC') || define('DIR_PUBLIC', DIR_ROOT . 'public' . DS);
